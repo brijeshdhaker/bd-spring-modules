@@ -1,0 +1,57 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "sb-discovery-service",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "org.examples.sb.SbDiscoveryServiceApplication",
+            "projectName": "sb-discovery-service",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": ""
+        },
+        {
+            "type": "java",
+            "name": "sb-frontend-module",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "org.examples.sb.SBFrontendModule",
+            "projectName": "sb-frontend-module",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "sb-backend-module-r1",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "org.examples.sb.SBBackendApplication",
+            "projectName": "sb-backend-module-r1",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": ""
+        },
+        {
+            "type": "java",
+            "name": "sb-backend-module-r2",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "org.examples.sb.SBBackendApplication",
+            "projectName": "sb-backend-module-r2",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": ""
+        },
+        {
+            "type": "java",
+            "name": "sb-gateway-module",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "org.examples.sb.SbGatewayModuleApplication",
+            "projectName": "sb-gateway-module",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
