@@ -22,8 +22,7 @@
         <module>sb-discovery-service</module>
         <module>sb-gateway-module</module>
         <module>sb-frontend-module</module>
-        <module>sb-backend-module-r1</module>
-        <module>sb-backend-module-r2</module>
+        <module>sb-backend-module</module>
     </modules>
 
     <properties>

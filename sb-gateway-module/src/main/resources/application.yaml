@@ -25,7 +25,7 @@ spring:
     gateway:
       routes:
         - id: sb-backend-module-r1
-          uri: lb://SB-BACKEND-MODULE-DC-R1
+          uri: lb://SB-BACKEND-MODULE-R1
           predicates:
             - Path=/api/v1/**
             - Header=X-Tenant-Id, DC-R1
@@ -35,7 +35,7 @@ spring:
 #            - PrefixPath=/r1
 
         - id: sb-backend-module-r2
-          uri: lb://SB-BACKEND-MODULE-DC-R2
+          uri: lb://SB-BACKEND-MODULE-R2
           predicates:
             - Path=/api/v1/**
             - Header=X-Tenant-Id, DC-R2
