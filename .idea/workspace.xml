@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30633151-d715-4afb-8728-2a26e7f9ee44" name="Changes" comment="" />
+    <list default="true" id="30633151-d715-4afb-8728-2a26e7f9ee44" name="Changes" comment="2025-05-22 First Commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,6 +39,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Maven.bd-spring-modules [package].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -101,6 +102,19 @@
       <option name="presentableId" value="Default" />
       <updated>1747889321045</updated>
     </task>
+    <task id="LOCAL-00001" summary="2025-05-22 First Commit">
+      <option name="closed" value="true" />
+      <created>1747889914733</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1747889914733</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2025-05-22 First Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025-05-22 First Commit" />
   </component>
 </project>
