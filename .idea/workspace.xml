@@ -4,179 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30633151-d715-4afb-8728-2a26e7f9ee44" name="Changes" comment="2025-05-22 First Commit">
-      <change afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/application-r1.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/application-r2.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R2/base.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R2/changelogs/JIRA-0001/proc-changelog.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R2/changelogs/JIRA-0001/script-changelog.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R2/changelogs/JIRA-0001/table-changelog.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R2/changelogs/JIRA-0002/script-changelog.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R2/changelogs/JIRA-0002/table-changelog.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R2/master.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R2/objects/procs/P_GET_PRODUCT_DETAILS.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R2/objects/procs/P_GET_USER_DETAILS.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R2/objects/tables/audit-type-table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R2/objects/tables/table_products.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R2/objects/tables/transaction-table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R2/proc-master.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R2/scripts-master.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R2/scripts/audit-type-data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R2/scripts/auditlog-data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R2/scripts/products-data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R2/scripts/role-data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R2/scripts/user-data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R2/scripts/user-role-data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R2/tables-master.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/sb_api_module_r1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/sb_api_module_r1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/sb_api_module_r2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/sb_api_module_r2.xml" afterDir="false" />
+    <list default="true" id="30633151-d715-4afb-8728-2a26e7f9ee44" name="Changes" comment="2025-05-22 Update Multi Region Logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/SBBackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/SBBackendApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/config/ApplicationProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/config/ApplicationProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/config/DataSourceConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/config/KafkaConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/config/KafkaConsumerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/config/KafkaCustomProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/config/KafkaCustomProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/config/KafkaProducerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/config/KafkaProducerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/config/LiquibaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/config/LiquibaseConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/config/Mapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/config/Mapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/config/OpenAPIConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/config/OpenAPIConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/config/PersistenceJPAConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/config/PersistenceJPAConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/config/cache/CacheConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/config/cache/CacheConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/config/cache/CacheEventLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/config/cache/CacheEventLogger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/controllers/AuditlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/controllers/AuditlogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/controllers/EntitlementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/controllers/EntitlementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/controllers/HealthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/controllers/HealthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/controllers/KafkaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/controllers/KafkaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/dao/extractors/UserResultSetExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/dao/extractors/UserResultSetExtractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/dao/impl/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/dao/impl/UserDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/dao/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/dao/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/filters/RegionInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/filters/RegionInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/helpers/HeaderRegionResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/helpers/HeaderRegionResolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/helpers/ModelHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/helpers/ModelHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/helpers/MultiRegionDataSourceRouter.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/helpers/MultiRegionDataSourceRouter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/helpers/RegionResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/helpers/RegionResolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/helpers/ThreadLocalRegionResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/helpers/ThreadLocalRegionResolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/kafka/KafkaConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/kafka/KafkaConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/kafka/KafkaProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/kafka/KafkaProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/kafka/TocipManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/kafka/TocipManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/repositories/AuditlogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/repositories/AuditlogRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/repositories/entities/AuditlogEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/repositories/entities/AuditlogEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/repositories/entities/LocalDateTimeConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/repositories/entities/LocalDateTimeConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/repositories/entities/RoleEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/repositories/entities/RoleEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/repositories/entities/SystemDateTimeConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/repositories/entities/SystemDateTimeConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/repositories/entities/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/repositories/entities/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/security/Auth0Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/security/Auth0Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/security/SpringSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/security/SpringSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/services/AuditlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/services/AuditlogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/services/JdbcService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/services/JdbcService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/services/TransactionsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/services/TransactionsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/utils/JwtUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/utils/JwtUtilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/java/org/examples/sb/utils/YamlLoaderInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/utils/YamlLoaderInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/resources/application-r1.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/resources/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/resources/ehcache.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/ehcache.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/resources/liquibase/base.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R0/base.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/resources/liquibase/changelogs/JIRA-0001/proc-changelog.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R0/changelogs/JIRA-0001/proc-changelog.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/resources/liquibase/changelogs/JIRA-0001/script-changelog.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R0/changelogs/JIRA-0001/script-changelog.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/resources/liquibase/changelogs/JIRA-0001/table-changelog.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R0/changelogs/JIRA-0001/table-changelog.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/resources/liquibase/changelogs/JIRA-0002/script-changelog.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R0/changelogs/JIRA-0002/script-changelog.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/resources/liquibase/changelogs/JIRA-0002/table-changelog.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R0/changelogs/JIRA-0002/table-changelog.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/resources/liquibase/master.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R0/master.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/resources/liquibase/objects/procs/P_GET_PRODUCT_DETAILS.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R0/objects/procs/P_GET_PRODUCT_DETAILS.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/resources/liquibase/objects/procs/P_GET_USER_DETAILS.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R0/objects/procs/P_GET_USER_DETAILS.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/resources/liquibase/objects/tables/audit-type-table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R0/objects/tables/audit-type-table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/resources/liquibase/objects/tables/table_products.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R0/objects/tables/table_products.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/resources/liquibase/objects/tables/transaction-table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R0/objects/tables/transaction-table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/resources/liquibase/proc-master.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R0/proc-master.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/resources/liquibase/scripts-master.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R0/scripts-master.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/resources/liquibase/scripts/audit-type-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R0/scripts/audit-type-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/resources/liquibase/scripts/auditlog-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R0/scripts/auditlog-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/resources/liquibase/scripts/products-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R0/scripts/products-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/resources/liquibase/scripts/role-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R0/scripts/role-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/resources/liquibase/scripts/user-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R0/scripts/user-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/resources/liquibase/scripts/user-role-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R0/scripts/user-role-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r1/src/main/resources/liquibase/tables-master.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R0/tables-master.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/SBBackendApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/config/ApplicationProperties.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/config/DataSourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/config/DataSourceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/config/KafkaConsumerConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/config/KafkaCustomProperties.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/config/KafkaProducerConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/config/LiquibaseConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/config/OpenAPIConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/config/PersistenceJPAConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/config/cache/CacheConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/config/cache/CacheEventLogger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/controllers/AuditlogController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/controllers/EntitlementController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/controllers/HealthController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/controllers/KafkaController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/controllers/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/dao/UserDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/dao/extractors/UserResultSetExtractor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/dao/impl/UserDAOImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/dao/mapper/UserMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/filters/RegionInterceptor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/helpers/HeaderRegionResolver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/helpers/ModelHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/helpers/MultiRegionDataSourceRouter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/helpers/RegionResolver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/helpers/ThreadLocalRegionResolver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/kafka/KafkaConsumer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/kafka/KafkaProducer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/kafka/TocipManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/repositories/AuditlogRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/repositories/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/repositories/entities/AuditlogEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/repositories/entities/LocalDateTimeConverter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/repositories/entities/RoleEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/repositories/entities/SystemDateTimeConverter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/repositories/entities/UserEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/security/Auth0Parser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/security/SpringSecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/services/AuditlogService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/services/JdbcService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/services/TransactionsService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/services/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/utils/JwtUtilities.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/java/org/examples/sb/utils/YamlLoaderInitializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/resources/application-r2.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/resources/ehcache.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/resources/liquibase/base.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R1/base.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/resources/liquibase/changelogs/JIRA-0001/proc-changelog.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R1/changelogs/JIRA-0001/proc-changelog.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/resources/liquibase/changelogs/JIRA-0001/script-changelog.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R1/changelogs/JIRA-0001/script-changelog.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/resources/liquibase/changelogs/JIRA-0001/table-changelog.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R1/changelogs/JIRA-0001/table-changelog.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/resources/liquibase/changelogs/JIRA-0002/script-changelog.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R1/changelogs/JIRA-0002/script-changelog.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/resources/liquibase/changelogs/JIRA-0002/table-changelog.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R1/changelogs/JIRA-0002/table-changelog.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/resources/liquibase/master.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R1/master.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/resources/liquibase/objects/procs/P_GET_PRODUCT_DETAILS.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R1/objects/procs/P_GET_PRODUCT_DETAILS.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/resources/liquibase/objects/procs/P_GET_USER_DETAILS.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R1/objects/procs/P_GET_USER_DETAILS.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/resources/liquibase/objects/tables/audit-type-table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R1/objects/tables/audit-type-table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/resources/liquibase/objects/tables/table_products.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R1/objects/tables/table_products.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/resources/liquibase/objects/tables/transaction-table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R1/objects/tables/transaction-table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/resources/liquibase/proc-master.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R1/proc-master.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/resources/liquibase/scripts-master.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R1/scripts-master.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/resources/liquibase/scripts/audit-type-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R1/scripts/audit-type-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/resources/liquibase/scripts/auditlog-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R1/scripts/auditlog-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/resources/liquibase/scripts/products-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R1/scripts/products-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/resources/liquibase/scripts/role-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R1/scripts/role-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/resources/liquibase/scripts/user-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R1/scripts/user-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/resources/liquibase/scripts/user-role-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R1/scripts/user-role-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module-r2/src/main/resources/liquibase/tables-master.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R1/tables-master.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-gateway-module/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-gateway-module/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/config/DataSourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/config/DataSourceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sb-backend-module/src/main/resources/application-r1.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/application-r1.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sb-backend-module/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,6 +49,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.sb-api-module-r0.executor": "Run",
     "Application.sb-api-module-r1.executor": "Run",
     "Application.sb-api-module-r2.executor": "Run",
     "Application.sb-discovery-service.executor": "Run",
@@ -241,7 +74,20 @@
       <recent name="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R0" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.sb-api-module-r1">
+  <component name="RunManager" selected="Application.sb-api-module-r2">
+    <configuration name="sb-api-module-r0" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="org.examples.sb.SBBackendApplication" />
+      <module name="sb-backend-module" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.examples.sb.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="bd-spring-modules" />
       <method v="2">
@@ -289,6 +135,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.sb-api-module-r1" />
+      <item itemvalue="Application.sb-api-module-r0" />
       <item itemvalue="Application.sb-api-module-r2" />
       <item itemvalue="Application.sb-discovery-service" />
       <item itemvalue="Application.sb-frontend-module" />
@@ -319,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747889992203</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="2025-05-22 Update Multi Region Logic">
+      <option name="closed" value="true" />
+      <created>1747922243393</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1747922243393</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -335,6 +190,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2025-05-22 First Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025-05-22 First Commit" />
+    <MESSAGE value="2025-05-22 Update Multi Region Logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025-05-22 Update Multi Region Logic" />
   </component>
 </project>

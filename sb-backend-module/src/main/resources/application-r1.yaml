@@ -1,6 +1,6 @@
 #
 server:
-  port: 9080
+  port: 9085
   servlet:
     context-path: /api/v1/r1
 #
