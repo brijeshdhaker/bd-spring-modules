@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="30633151-d715-4afb-8728-2a26e7f9ee44" name="Changes" comment="2025-05-22 Update Multi Region Logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/config/DataSourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/java/org/examples/sb/config/DataSourceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module/src/main/resources/application-r1.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/application-r1.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-backend-module/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-backend-module/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sb-gateway-module/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-gateway-module/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +60,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "develop/regular__development",
     "last_opened_file_path": "/home/brijeshdhaker/IdeaProjects/bd-spring-modules/sb-backend-module/src/main/resources/liquibase/DC-R1",
-    "settings.editor.selected.configurable": "advanced.settings"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -174,7 +173,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747922243393</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="2025-05-22 Update Multi Region Logic">
+      <option name="closed" value="true" />
+      <created>1747923432583</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1747923432583</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

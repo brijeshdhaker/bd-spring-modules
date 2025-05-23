@@ -24,6 +24,7 @@ spring:
   cloud:
     gateway:
       routes:
+        #
         - id: sb-backend-module-r1
           uri: lb://SB-BACKEND-MODULE-R1
           predicates:
@@ -33,7 +34,7 @@ spring:
             - RewritePath=/api/v1/?(?<segment>.*), /api/v1/r1/$\{segment}
             - AddRequestParameter=src, gw
 #            - PrefixPath=/r1
-
+        #
         - id: sb-backend-module-r2
           uri: lb://SB-BACKEND-MODULE-R2
           predicates:
@@ -44,14 +45,22 @@ spring:
             - AddRequestParameter=src, gw
 #            - PrefixPath=/r1
 #            - AddRequestHeader=X-Tenant-Id, DC-R2
-
+        #
+        - id: sb-backend-module-r0
+          uri: lb://SB-BACKEND-MODULE-R0
+          predicates:
+            - Path=/api/v1/**
+          filters:
+            - AddRequestParameter=src, gw
+            - AddRequestHeadersIfNotPresent=X-Tenant-Id:DC-R0
+        #
         - id: bd-frontend-module
           uri: lb://SB-FRONTEND-MODULE
           predicates:
             - Path=/web/**
           filters:
             - RewritePath=/web/?(?<segment>.*), /web/v1/r2/$\{segment}
-
+        #
         - id: no-service
           uri: lb://NO-SERVICE
           predicates:

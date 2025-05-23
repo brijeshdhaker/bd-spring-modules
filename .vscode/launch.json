@@ -27,10 +27,10 @@
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "mainClass": "org.examples.sb.SBBackendApplication",
-            "projectName": "sb-backend-module-r1",
+            "projectName": "sb-backend-module",
             "args": "",
             "envFile": "${workspaceFolder}/.env",
-            "vmArgs": ""
+            "vmArgs": "-Dspring.profiles.active=r1"
         },
         {
             "type": "java",
@@ -38,10 +38,10 @@
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "mainClass": "org.examples.sb.SBBackendApplication",
-            "projectName": "sb-backend-module-r2",
+            "projectName": "sb-backend-module",
             "args": "",
             "envFile": "${workspaceFolder}/.env",
-            "vmArgs": ""
+            "vmArgs": "-Dspring.profiles.active=r2"
         },
         {
             "type": "java",
