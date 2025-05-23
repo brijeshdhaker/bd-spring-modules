@@ -25,14 +25,14 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a href="/" class="nav-link">Home</a>
+                        <a href="/web/v1" class="nav-link">Home</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav d-none d-md-block">
 
                     <!-- Login button: show if NOT authenticated -->
                     <li sec:authorize="!isAuthenticated()" class="nav-item">
-                        <a th:href="@{/oauth2/authorization/okta}" id="qsLoginBtn" class="btn btn-primary btn-margin">Login</a>
+                        <a th:href="@{/web/v1/oauth2/authorization/azure-dev}" id="qsLoginBtn" class="btn btn-primary btn-margin">Login</a>
                     </li>
                     <!-- / Login button -->
 
@@ -50,10 +50,10 @@
                         <div class="dropdown-menu dropdown-menu-left">
                             <!-- Show the user's full name from the id token here -->
                             <div class="dropdown-header" th:text="${profile.get('name')}"></div>
-                            <a href="/profile" class="dropdown-item dropdown-profile">
+                            <a href="/web/v1/profile" class="dropdown-item dropdown-profile">
                                 <i class="fas fa-user mr-3"></i> Profile
                             </a>
-                            <form name="logoutForm" th:action="@{/logout}" method="post">
+                            <form name="logoutForm" th:action="@{/web/v1/logout}" method="post">
                                 <button type="submit" id="qsLogoutBtn" class="dropdown-item">
                                     <i class="fas fa-power-off mr-3"></i> Log out
                                 </button>
@@ -66,7 +66,7 @@
 
                 <!-- Responsive login button: show if NOT authenticated -->
                 <ul sec:authorize="!isAuthenticated()" class="navbar-nav d-md-none">
-                    <a th:href="@{/oauth2/authorization/okta}" id="qsLoginBtn" class="btn btn-primary btn-block">Login</a>
+                    <a th:href="@{/web/v1/oauth2/authorization/azure-dev}" id="qsLoginBtn" class="btn btn-primary btn-block">Login</a>
                 </ul>
                 <!-- /Responsive login button -->
 
@@ -82,10 +82,10 @@
                     </li>
                     <li>
                         <i class="fas fa-user mr-3"></i>
-                        <a th:href="@{/profile}"> Profile</a>
+                        <a th:href="@{/web/v1/profile}"> Profile</a>
                     </li>
                     <li>
-                        <form name="logoutForm" th:action="@{/logout}" method="post">
+                        <form name="logoutForm" th:action="@{/web/v1/logout}" method="post">
                             <button type="submit" class="dropdown-item">
                                 <i class="fas fa-power-off mr-3"></i> Log out
                             </button>

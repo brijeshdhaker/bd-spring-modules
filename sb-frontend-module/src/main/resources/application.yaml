@@ -1,6 +1,6 @@
 #
 server:
-  port: 8080
+  port: 9075
   servlet:
     context-path: /web/v1
   http2:
@@ -25,7 +25,7 @@ azure:
 spring:
   #
   application:
-    name: bd-frontend-module
+    name: sb-frontend-module
     instance-id: global
   output.ansi.enabled: ALWAYS
   #
@@ -35,12 +35,17 @@ spring:
         provider:
           azure:
             issuer-uri: https://login.microsoftonline.com/da5ac8f7-13d6-46e7-815d-012b01123148/v2.0
+            token-uri: https://login.microsoftonline.com/da5ac8f7-13d6-46e7-815d-012b01123148/oauth2/v2.0/token
+            jwk-set-uri: https://login.microsoftonline.com/common/discovery/v2.0/keys
+            user-info-uri: https://graph.microsoft.com/v1.0/me
             user-name-attribute: name
         registration:
           azure-dev:
             provider: azure
             client-id: c5c062d8-4fe2-4319-9897-a59e57ed7ad2
             client-secret: fXo8Q~qQgHPaJtyViMQMM_PQxSsRAN6uvqPTtdia
+            redirect-uri-template: "http://localhost:8100/web/v1/login/oauth2/code/{registrationId}"
+            authorization-grant-type: authorization_code
             scope:
               - openid
               - email
@@ -82,4 +87,6 @@ management:
 logging:
   level:
     root: info
-    org.springframework.web: ERROR
+    org.springframework.web: INFO
+    org.springframework.security: INFO
+    org.springframework.security.oauth2: INFO

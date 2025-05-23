@@ -16,7 +16,7 @@ public class AuthController {
     //@Autowired
     //private RestTemplate restTemplate;
 
-    @GetMapping("/web/auth_handler")
+    @GetMapping("/auth_handler")
     public ResponseEntity<?> handelOAuthCallback(@RequestParam String code) {
         ResponseEntity<?> response;
         try {
@@ -28,7 +28,7 @@ public class AuthController {
             params.add("code", code);
             params.add("client_id","c5c062d8-4fe2-4319-9897-a59e57ed7ad2");
             params.add("client_secret","fXo8Q~qQgHPaJtyViMQMM_PQxSsRAN6uvqPTtdia");
-            params.add("redirect_uri","http://localhost:8080/web/auth_handler");
+            params.add("redirect_uri","http://localhost:9075/web/v1/auth_handler");
             params.add("grant_type","authorization_code");
 
             HttpHeaders headers = new HttpHeaders();

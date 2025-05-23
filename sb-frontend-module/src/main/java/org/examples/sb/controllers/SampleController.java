@@ -179,10 +179,11 @@ public class SampleController {
         headers.setContentType(MediaType.APPLICATION_JSON);
 
         HttpEntity<String> entity = new HttpEntity<String>("", headers);
-        ResponseEntity<String> response = restTemplate.exchange("http://localhost:9080/api/v1/users", HttpMethod.GET, entity, String.class);
+        ResponseEntity<String> response = restTemplate.exchange("http://localhost:8100/api/v1/users", HttpMethod.GET, entity, String.class);
         String users = response.getBody();
         model.addAttribute("users", users);
         return hydrateUI(model, "result");
+
     }
 
     // survey endpoint - did the sample address your needs?

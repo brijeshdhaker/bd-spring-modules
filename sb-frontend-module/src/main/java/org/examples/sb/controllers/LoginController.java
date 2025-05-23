@@ -35,8 +35,7 @@ public class LoginController {
     @GetMapping("/oauth_login")
     public String getLoginPage(Model model) {
         Iterable<ClientRegistration> clientRegistrations = null;
-        ResolvableType type = ResolvableType.forInstance(clientRegistrationRepository)
-                .as(Iterable.class);
+        ResolvableType type = ResolvableType.forInstance(clientRegistrationRepository).as(Iterable.class);
         if (type != ResolvableType.NONE && ClientRegistration.class.isAssignableFrom(type.resolveGenerics()[0])) {
             clientRegistrations = (Iterable<ClientRegistration>) clientRegistrationRepository;
         }

@@ -4,15 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30633151-d715-4afb-8728-2a26e7f9ee44" name="Changes" comment="2025-05-22 Update Multi Region Logic">
+    <list default="true" id="30633151-d715-4afb-8728-2a26e7f9ee44" name="Changes" comment="2025-05-23 Update Multi Region Logic">
+      <change afterPath="$PROJECT_DIR$/sb-gateway-module/src/main/java/org/examples/sb/security/GatewaySecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sb-gateway-module/src/main/resources/templates/hello.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sb-gateway-module/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sb-frontend-module/src/main/java/org/examples/sb/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-frontend-module/src/main/java/org/examples/sb/controllers/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sb-frontend-module/src/main/java/org/examples/sb/controllers/HomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sb-frontend-module/src/main/java/org/examples/sb/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-frontend-module/src/main/java/org/examples/sb/controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sb-frontend-module/src/main/java/org/examples/sb/controllers/SampleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-frontend-module/src/main/java/org/examples/sb/controllers/SampleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sb-frontend-module/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-frontend-module/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sb-frontend-module/src/main/resources/templates/content/graph.html" beforeDir="false" afterPath="$PROJECT_DIR$/sb-frontend-module/src/main/resources/templates/content/graph.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sb-frontend-module/src/main/resources/templates/content/status.html" beforeDir="false" afterPath="$PROJECT_DIR$/sb-frontend-module/src/main/resources/templates/content/status.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sb-frontend-module/src/main/resources/templates/content/token.html" beforeDir="false" afterPath="$PROJECT_DIR$/sb-frontend-module/src/main/resources/templates/content/token.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sb-frontend-module/src/main/resources/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/sb-frontend-module/src/main/resources/templates/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sb-frontend-module/src/main/resources/templates/fragments/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/sb-frontend-module/src/main/resources/templates/fragments/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sb-frontend-module/src/main/resources/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/sb-frontend-module/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sb-frontend-module/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sb-frontend-module/src/main/resources/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/sb-frontend-module/src/main/resources/templates/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sb-gateway-module/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-gateway-module/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sb-gateway-module/src/main/java/org/examples/sb/SbGatewayModuleApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-gateway-module/src/main/java/org/examples/sb/SbGatewayModuleApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sb-gateway-module/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-gateway-module/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -52,9 +77,11 @@
     "Application.sb-api-module-r1.executor": "Run",
     "Application.sb-api-module-r2.executor": "Run",
     "Application.sb-discovery-service.executor": "Run",
-    "Application.sb-gateway-module.executor": "Run",
+    "Application.sb-frontend-module.executor": "Run",
+    "Application.sb-gateway-module.executor": "Debug",
     "Maven.bd-spring-modules [package].executor": "Run",
     "Maven.sb-backend-module-r1 [package].executor": "Run",
+    "Maven.sb-gateway-module [package].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -73,7 +100,7 @@
       <recent name="$PROJECT_DIR$/sb-backend-module/src/main/resources/liquibase/DC-R0" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.sb-api-module-r2">
+  <component name="RunManager" selected="Application.sb-gateway-module">
     <configuration name="sb-api-module-r0" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="org.examples.sb.SBBackendApplication" />
       <module name="sb-backend-module" />
@@ -181,7 +208,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747923432583</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="2025-05-23 Update Multi Region Logic">
+      <option name="closed" value="true" />
+      <created>1747961984868</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1747961984868</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,6 +233,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2025-05-22 First Commit" />
     <MESSAGE value="2025-05-22 Update Multi Region Logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025-05-22 Update Multi Region Logic" />
+    <MESSAGE value="2025-05-23 Update Multi Region Logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025-05-23 Update Multi Region Logic" />
   </component>
 </project>
