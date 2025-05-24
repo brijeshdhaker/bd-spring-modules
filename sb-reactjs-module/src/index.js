@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-
+import { CookiesProvider } from 'react-cookie';
 import { PublicClientApplication } from '@azure/msal-browser';
 import { MsalProvider } from '@azure/msal-react';
 import { msalConfig } from './authConfig';
@@ -19,8 +19,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
  */
  root.render(
   <React.StrictMode>
+    <CookiesProvider>
       <MsalProvider instance={msalInstance}>
           <App />
       </MsalProvider>
+    </CookiesProvider>
   </React.StrictMode>
 );

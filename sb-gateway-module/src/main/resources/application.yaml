@@ -8,22 +8,24 @@ spring:
     name: sb-gateway-module
     instance-id: global
   output.ansi.enabled: ALWAYS
+
 #
   autoconfigure:
     # TODO: remove when fixed https://github.com/spring-projects/spring-security/issues/6314
     exclude: org.springframework.boot.actuate.autoconfigure.security.reactive.ReactiveManagementWebSecurityAutoConfiguration
+#
   thymeleaf:
     cache: false
 #
-  security:
-    oauth2:
-      resourceserver:
-        id: sb-gateway-module
-        jwk:
-          jwk-set-uri: https://login.microsoftonline.com/common/discovery/v2.0/keys
-        jwt:
-          issuer-uri: https://sts.windows.net/da5ac8f7-13d6-46e7-815d-012b01123148/
-          audiences: api://7f1cf4d7-ca24-47c2-bf17-61a8a796679e
+#  security:
+#    oauth2:
+#      resourceserver:
+#        id: sb-gateway-module
+#        jwk:
+#          jwk-set-uri: https://login.microsoftonline.com/common/discovery/v2.0/keys
+#        jwt:
+#          issuer-uri: https://sts.windows.net/da5ac8f7-13d6-46e7-815d-012b01123148/
+#          audiences: api://7f1cf4d7-ca24-47c2-bf17-61a8a796679e
 #      #
 #      client:
 #        provider:
@@ -51,8 +53,8 @@ spring:
     gateway:
       routes:
         #
-        - id: sb-backend-module-r1
-          uri: lb://SB-BACKEND-MODULE-R1
+        - id: sb-apis-module-r1
+          uri: lb://SB-APIS-MODULE-R1
           predicates:
             - Path=/api/v1/**
             - Header=X-Tenant-Id, DC-R1
@@ -61,8 +63,8 @@ spring:
             - AddRequestParameter=src, gw
 #            - PrefixPath=/r1
         #
-        - id: sb-backend-module-r2
-          uri: lb://SB-BACKEND-MODULE-R2
+        - id: sb-apis-module-r2
+          uri: lb://SB-APIS-MODULE-R2
           predicates:
             - Path=/api/v1/**
             - Header=X-Tenant-Id, DC-R2
@@ -75,18 +77,18 @@ spring:
 #            - AddRequestHeader=X-Tenant-Id, DC-R2
 
         #
-        - id: sb-backend-module-r0
-          uri: lb://SB-BACKEND-MODULE-R0
+        - id: sb-apis-module-r0
+          uri: lb://SB-APIS-MODULE-R0
           predicates:
             - Path=/api/v1/**
           filters:
             - AddRequestParameter=src, gw
             - AddRequestHeadersIfNotPresent=X-Tenant-Id:DC-R0
         #
-        - id: sb-frontend-module
-          uri: lb://SB-FRONTEND-MODULE
+        - id: sb-server-module
+          uri: lb://SB-SERVER-MODULE
           predicates:
-            - Path=/web/**
+            - Path=/**
 
         #
         - id: no-service

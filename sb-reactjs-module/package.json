@@ -8,7 +8,10 @@
         "bootstrap": "^5.2.3",
         "react": "^18.2.0",
         "react-bootstrap": "^2.7.0",
+        "react-cookie": "^8.0.1",
         "react-dom": "^18.2.0",
+        "react-router-dom": "^7.6.0",
+        "reactstrap": "^9.2.3",
         "web-vitals": "^2.1.4"
     },
     "devDependencies": {
@@ -40,5 +43,6 @@
     },
     "overrides": {
         "postcss": "8.4.41"
-    }
+    },
+    "proxy": "http://localhost:8100"
 }

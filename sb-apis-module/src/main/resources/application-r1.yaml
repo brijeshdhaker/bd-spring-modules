@@ -1,0 +1,11 @@
+#
+server:
+  port: 8090
+  servlet:
+    context-path: /api/v1/r1
+#
+spring:
+  #
+  application:
+    name: sb-apis-module-r1
+    instance-id: DC-R1

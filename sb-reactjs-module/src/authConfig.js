@@ -71,5 +71,5 @@ export const graphConfig = {
 };
 
 export const restConfig = {
-    restEndpoint: "http://localhost:8100/api/v1/users",
+    restEndpoint: "/api/v1/users",
 };

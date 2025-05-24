@@ -21,6 +21,10 @@ This minimal React application demonstrates usage of the Microsoft Authenticatio
 - Sign out users
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##
+npx create-react-app@5 app
+cd app
+npm i bootstrap@5 react-cookie@4 react-router-dom@6 reactstrap@9
 
 ## Available scripts
 

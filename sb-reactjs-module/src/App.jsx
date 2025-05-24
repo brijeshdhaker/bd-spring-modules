@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import { PageLayout } from './components/PageLayout';
 import { loginRequest, apiLoginRequest } from './authConfig';
 import { callMsGraph } from './graph';
