@@ -23,25 +23,14 @@
         },
         {
             "type": "java",
-            "name": "sb-apis-module-r1",
+            "name": "sb-apis-module",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "mainClass": "org.examples.sb.SBApisModule",
             "projectName": "sb-apis-module",
             "args": "",
             "envFile": "${workspaceFolder}/.env",
-            "vmArgs": "-Dspring.profiles.active=r1"
-        },
-        {
-            "type": "java",
-            "name": "sb-apis-module-r2",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "mainClass": "org.examples.sb.SBApisModule",
-            "projectName": "sb-apis-module",
-            "args": "",
-            "envFile": "${workspaceFolder}/.env",
-            "vmArgs": "-Dspring.profiles.active=r2"
+            "vmArgs": "-Dspring.profiles.active=r0"
         },
         {
             "type": "java",

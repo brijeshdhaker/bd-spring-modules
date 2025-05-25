@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import AppNavbar from './AppNavbar';
+import AppNavbar from './components/AppNavbar';
+import PageLayout from './components/PageLayout';
 import { Link } from 'react-router-dom';
 import { Button, Container } from 'reactstrap';
 import { useCookies } from 'react-cookie';
@@ -54,7 +55,11 @@ const Home = () => {
 
   const button = authenticated ?
     <div>
-      <Button color="link"><Link to="/groups">Manage JUG Tour</Link></Button>
+      <Button color="link"><Link to="/groups">Manage Tours</Link></Button>
+      <br/>
+      <Button color="link"><Link to="/groups">Manage Tours</Link></Button>
+      <br/>
+      <Button color="link"><Link to="/users">Manage Users</Link></Button>
       <br/>
       <Button color="link" onClick={logout}>Logout</Button>
     </div> :

@@ -77,7 +77,7 @@ public class SpringWebSecurityConfig {
                 // the / and /home paths are configured to not require any authentication.
                 //.requestMatchers("/", "/home").permitAll()
                 .requestMatchers("/", "/index.html", "/images/**", "/static/**",
-                                "/*.ico", "/*.json", "/*.png", "/api/user").permitAll()
+                                "/*.ico", "/*.json", "/*.png", "/api/user", "/groups", "/group/**").permitAll()
                 // All other paths must be authenticated.
                 .anyRequest().authenticated())
         .headers((headers) -> headers
