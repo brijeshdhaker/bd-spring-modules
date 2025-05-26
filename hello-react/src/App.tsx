@@ -13,15 +13,13 @@ import UsersPage from "./components/UsersPage";
 
 import { AuthenticatedTemplate, UnauthenticatedTemplate, useMsal } from '@azure/msal-react';
 
-
-
-
 export default function App() {
     return (
       <>
         <Router>
             <Routes>
                 <Route path="/" element={<Home/>}/>
+                <Route path="/index.html" element={<Home/>}/>
                 <Route exact={true} path='/groups' element={<Groups/>}/>
                 <Route exact={true} path='/groups/:id' element={<GroupEdit/>}/>
                 <Route exact={true} path='/users' element={<UsersPage/>}/>

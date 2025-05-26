@@ -11,12 +11,3 @@ export const ProfileData = (props) => {
         </div>
     );
 };
-
-
-export const RestData = (props) => {
-    return (
-        <div id="profile-div">
-            <p><strong>Users : </strong> { JSON.stringify(props.restData, null, 2) }</p>
-        </div>
-    );
-};

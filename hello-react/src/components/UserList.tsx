@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
 import { AuthenticatedTemplate, UnauthenticatedTemplate, useMsal } from '@azure/msal-react';
 import { loginRequest, apiLoginRequest, graphConfig } from '../helpers/authConfig';
+import axios from 'axios';
 
 const UserList = () => {
 
@@ -16,41 +17,56 @@ const UserList = () => {
   const [accessToken, setAccessToken] = useState(String);
 
 
+  const loadUserData = () => {
+    setLoading(true);
+    // Silently acquires an access token which is then attached to a request for MS Graph data}
+    if(!accessToken){
+
+        instance.acquireTokenSilent({
+            scopes: ["api://7f1cf4d7-ca24-47c2-bf17-61a8a796679e/User.Read"],
+            account: accounts[0]
+        }).then((response) => {
+
+          //console.log("Access Token acquired silently: ", response.accessToken);
+          //setAccessToken(response.accessToken);
+
+          axios.defaults.withCredentials = true;
+          axios.defaults.headers.common['X-XSRF-TOKEN'] = cookies['XSRF-TOKEN'];
+          axios.defaults.headers.common['Accept'] = 'application/json';
+          axios.defaults.headers.common['Content-Type'] = 'application/json';
+          axios.defaults.headers.common['Authorization'] = `Bearer ${response.accessToken}`;
+          //axios.defaults.baseURL = '/api/v1';
+          
+          /*
+          try {
+            const res = axios.get('/users');
+            console.log("User data fetched successfully:", res);
+          } catch (error) {
+            console.error("Error fetching user data:", error);
+          }
+          */
+
+          axios.get('/api/v1/users')
+            .then(response => {
+              console.log(response)
+              setGroups(response.data);
+              setLoading(false);
+            }).catch(error => {
+              console.error("Error fetching user data:", error);
+            });
+
+        }).catch((error) => {
+          console.error("Error acquiring token silently:", error);
+        });
+
+    }
+}; 
+  
+  // Call when page loaded
   useEffect(() => {
 
-    setLoading(true);
-    
-    // Silently acquires an access token which is then attached to a request for MS Graph data
-    instance.acquireTokenSilent({
-        ...apiLoginRequest,
-        account: accounts[0],
-    })
-    .then((response) => {
-        //console.log("Rest API Token : " + response.accessToken);  
-      return response.accessToken;
-    }).then((accessToken) => {
-        //console.log("data : " + data);  
-        setAccessToken(accessToken);
+    loadUserData();
 
-        fetch('/api/v1/users', {
-          method: 'GET',
-          headers: {
-            'X-XSRF-TOKEN': cookies['XSRF-TOKEN'],
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer ' + accessToken
-          },
-          credentials: 'include'
-        })
-        .then(response => response.json())
-        .then(data => {
-          setGroups(data);
-          setLoading(false);
-        })
-
-    });
-
-    
   }, []);
 
   //

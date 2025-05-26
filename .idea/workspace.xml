@@ -4,31 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30633151-d715-4afb-8728-2a26e7f9ee44" name="Changes" comment="2025-05-24 Update Load balancer logic">
-      <change afterPath="$PROJECT_DIR$/sb-reactjs-tours/src/components/Alert.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-reactjs-tours/src/components/Button.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-reactjs-tours/src/components/ListGroup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-reactjs-tours/src/components/Message.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-reactjs-tours/src/components/PageLayout.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-reactjs-tours/src/components/ProfileData.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-reactjs-tours/src/components/SignInButton.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-reactjs-tours/src/components/SignOutButton.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-reactjs-tours/src/components/UserList.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-reactjs-tours/src/helpers/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-reactjs-tours/src/helpers/graph.js" afterDir="false" />
+    <list default="true" id="30633151-d715-4afb-8728-2a26e7f9ee44" name="Changes" comment="2025-05-25 Update Load balancer logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-reactjs-module/src/authConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/sb-reactjs-module/src/authConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-reactjs-tours/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/sb-reactjs-tours/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-reactjs-tours/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/sb-reactjs-tours/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-reactjs-tours/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/sb-reactjs-tours/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-reactjs-tours/src/AppNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/sb-reactjs-tours/src/components/AppNavbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-reactjs-tours/src/GroupEdit.js" beforeDir="false" afterPath="$PROJECT_DIR$/sb-reactjs-tours/src/components/GroupEdit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-reactjs-tours/src/GroupList.js" beforeDir="false" afterPath="$PROJECT_DIR$/sb-reactjs-tours/src/components/GroupList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-reactjs-tours/src/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/sb-reactjs-tours/src/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-reactjs-tours/src/authConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/sb-reactjs-tours/src/configs/authConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-reactjs-tours/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/sb-reactjs-tours/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-server-module/src/main/java/org/examples/sb/security/SpringWebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-server-module/src/main/java/org/examples/sb/security/SpringWebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SANDBOX-UI.postman_collection.json" beforeDir="false" afterPath="$PROJECT_DIR$/SANDBOX-UI.postman_collection.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello-react/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/hello-react/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello-react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/hello-react/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello-react/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/hello-react/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello-react/src/components/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/hello-react/src/components/NavBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello-react/src/components/UserList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/hello-react/src/components/UserList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sb-reactjs-module/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sb-reactjs-module/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sb-reactjs-module/src/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/sb-reactjs-module/src/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sb-reactjs-module/src/components/ProfileData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sb-reactjs-module/src/components/ProfileData.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +105,7 @@
       <recent name="$PROJECT_DIR$/sb-server-module/src/main/resources/static/style" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.sb-server-module">
+  <component name="RunManager" selected="Application.sb-gateway-module">
     <configuration name="sb-api-module-r0" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="org.examples.sb.SBApisModule" />
       <module name="sb-apis-module" />
@@ -259,7 +245,23 @@
       <option name="project" value="LOCAL" />
       <updated>1748066367425</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="2025-05-25 Update Load balancer logic">
+      <option name="closed" value="true" />
+      <created>1748192886451</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1748192886451</updated>
+    </task>
+    <task id="LOCAL-00010" summary="2025-05-25 Update Load balancer logic">
+      <option name="closed" value="true" />
+      <created>1748192916786</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1748192916786</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -278,7 +280,8 @@
     <MESSAGE value="2025-05-22 Update Multi Region Logic" />
     <MESSAGE value="2025-05-23 Update Multi Region Logic" />
     <MESSAGE value="2025-05-24 Update Load balancer logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025-05-24 Update Load balancer logic" />
+    <MESSAGE value="2025-05-25 Update Load balancer logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025-05-25 Update Load balancer logic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

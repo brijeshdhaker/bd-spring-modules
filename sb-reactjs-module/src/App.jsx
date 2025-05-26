@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { PageLayout } from './components/PageLayout';
 import { loginRequest, apiLoginRequest } from './authConfig';
 import { callMsGraph } from './graph';
-import { callR1RestApi, callR2RestApi } from './api';
-import { ProfileData, RestData  } from './components/ProfileData';
+import { callR1RestApi} from './api';
+import { ProfileData} from './components/ProfileData';
 
 import { AuthenticatedTemplate, UnauthenticatedTemplate, useMsal } from '@azure/msal-react';
 import './App.css';
