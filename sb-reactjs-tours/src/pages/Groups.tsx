@@ -53,8 +53,8 @@ const Groups = () => {
       <td>{user.email}</td>
       <td>
         <ButtonGroup>
-          <Button size="sm" variant="primary" tag={Link} to={"/users/" + user.id}>Edit</Button>
-          <Button size="sm" variant="danger" onClick={() => remove(user.id)}>Delete</Button>
+          <Link className="btn btn-success" role="button" to={"/group/" + user.id} >Edit</Link>
+          <Link className="btn btn-danger" role="button" onClick={() => remove(user.id)} >Delete</Link>
         </ButtonGroup>
       </td>
     </tr>

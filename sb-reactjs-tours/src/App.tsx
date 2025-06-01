@@ -14,6 +14,7 @@ import Contact from './pages/Contact';
 import NoPage from './pages/NoPage';
 import Groups from './pages/Groups';
 import Users from './pages/Users';
+import GroupEdit from './pages/GroupEdit';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -38,6 +39,7 @@ function App() {
           <Route path="/" element={<AppNavbar />}>
             <Route path="home" index element={<Home />} />
             <Route path="groups" element={<Groups />} />
+            <Route path="group/:id" element={<GroupEdit />} />
             <Route path="users" element={<Users />} />
             <Route path="contact" element={<Contact />} />
             <Route path="blogs" element={<Blogs />} />
