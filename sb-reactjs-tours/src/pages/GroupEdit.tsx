@@ -85,7 +85,7 @@ const GroupEdit = () => {
           </div>
           <FormGroup>
             <Button variant="primary" type="submit">Save</Button>{' '}
-            <Button variant="secondary" tag={Link} to="/groups">Cancel</Button>
+            <Link className="btn btn-secondary" role="button" to="/groups">Cancel</Link>
           </FormGroup>
         </Form>
       </Container>

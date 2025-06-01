@@ -69,7 +69,7 @@ const Groups = () => {
        <Container fluid>
         <h3>@ Group Page </h3>
         <div className="float-end">
-          <Button variant="success" tag={Link} to="/users/new">Add Group</Button>
+          <Link className="btn btn-success" role="button" to="/group/new">Add Group</Link>
         </div>
         {dispaly && 
         <Table className="mt-4">
