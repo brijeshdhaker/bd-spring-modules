@@ -4,16 +4,21 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { useIsAuthenticated, useMsal} from '@azure/msal-react';
+import { useMsal} from '@azure/msal-react';
 import SignOutButton from './SignOutButton';
 import SignInButton from './SignInButton';
 import { Outlet, Link } from "react-router-dom";
 import { loadUserDetails } from '../services/ApiServices';
 
+interface AppNavbarProps {
+    isAuthenticated: boolean;
+    heading: string;
+    onSelectItem: (item: string) => void;
+}
 
-function AppNavbar() {
+function AppNavbar({isAuthenticated, heading, onSelectItem}: AppNavbarProps) {
   
-  const isAuthenticated = useIsAuthenticated();
+  //Hook
   const[user, setUser] = useState({ id: "", name: "", email: "", roles:[]});
   const[dispaly, setDispaly] = useState(false);
   const { instance, accounts } = useMsal();
@@ -21,6 +26,10 @@ function AppNavbar() {
   const userName = account.name || "User";
   const luser = instance.getAllAccounts()[0] || "";
   
+  // Event Handler
+  const handelClick = (event : MouseEvent ) => console.log(event);
+  const handelNavClick = (eventKey, event) => console.log(eventKey, event);
+
   //
   useEffect(() => {
     if(!user.id){
@@ -48,11 +57,11 @@ function AppNavbar() {
               <Link className='nav-link' to="/groups">Groups</Link>
               <Link className='nav-link' to="/users">Users</Link>
               <Link className='nav-link' to="/blogs">Blogs</Link>
-              <NavDropdown title="Link" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
+              <NavDropdown title="Action Menu" id="navbarScrollingDropdown" onSelect={handelNavClick}>
+                <NavDropdown.Item href="#action3" eventKey="AAA">Action-1</NavDropdown.Item>
+                <NavDropdown.Item href="#action4" eventKey="BBB">Action-2</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">Something here</NavDropdown.Item>
+                <NavDropdown.Item href="#action5" eventKey="CCC" onClick={handelClick}>Action-2</NavDropdown.Item>
                 <Link className='dropdown-item' to="/nothing-here">Nothing Here</Link>
               </NavDropdown>
               <Nav.Link href="/contact">Contact US</Nav.Link>
@@ -77,7 +86,7 @@ function AppNavbar() {
       <Navbar expand="lg" className="bg-body-tertiary" bg="dark" data-bs-theme="dark">
         <Container fluid>
           <Navbar.Brand href="/">
-              <img alt="" src="/react.svg" width="30" height="30" className="d-inline-block align-top"/>{' '}@SBWORKBENCH
+              <img alt="" src="/react.svg" width="30" height="30" className="d-inline-block align-top"/>{'  ' + heading}
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           {getNavLinks()}
