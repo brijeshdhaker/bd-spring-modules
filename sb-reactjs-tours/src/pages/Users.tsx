@@ -53,8 +53,8 @@ const Users = () => {
       <td>{user.email}</td>
       <td>
         <ButtonGroup>
-          <Button size="sm" color="primary" tag={Link} to={"/users/" + user.id}>Edit</Button>
-          <Button size="sm" color="danger" onClick={() => remove(user.id)}>Delete</Button>
+          <Button size="sm" variant="primary" tag={Link} to={"/users/" + user.id}>Edit</Button>
+          <Button size="sm" variant="danger" onClick={() => remove(user.id)}>Delete</Button>
         </ButtonGroup>
       </td>
     </tr>
@@ -66,10 +66,10 @@ const Users = () => {
 
   return (
     <div>
-       <h1>@ Users Page </h1>
        <Container fluid>
+        <h3>@ Users Page </h3>
         <div className="float-end">
-          <Button color="success" tag={Link} to="/groups/new">Add Group</Button>
+          <Button variant="success" tag={Link} to="/users/new">Add Group</Button>
         </div>
         {dispaly && 
         <Table className="mt-4">

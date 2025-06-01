@@ -77,7 +77,7 @@ const Home = () => {
 
   return (
     <div>
-      <h1>@ Home Page </h1>
+      <h3>@ Home Page </h3>
       {dispaly && 
         <Table striped bordered hover>
           <thead>
