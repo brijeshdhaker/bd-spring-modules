@@ -29,9 +29,9 @@ public class SBServerModule {
 
     public static void main(String[] args) {
 
-        log.info("SB Frontend Module Starting...");
+        log.info("SB Server Module Starting...");
         SpringApplication.run(SBServerModule.class, args);
-        log.info("SB Frontend Module Started...");
+        log.info("SB Server Module Started...");
 
         // Load properties file and set properties used throughout the sample
         //Properties properties = new Properties();
@@ -48,7 +48,7 @@ public class SBServerModule {
         Stream.of("Brijesh", "Neeta", "Keshvi", "Tejas").forEach(name ->
                 userRepository.save(new User(name))
         );
-        Stream.of("Pune Stars", "Mumbai JUG", "Delhi Sardar", "Chennai Kings").forEach(name ->
+        Stream.of("Pune Stars", "Mumbai Riders", "Delhi Sardar", "Chennai Kings").forEach(name ->
                 groupRepository.save(new Group(name))
         );
 

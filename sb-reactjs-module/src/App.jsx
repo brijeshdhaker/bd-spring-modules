@@ -20,28 +20,18 @@ const ProfileContent = () => {
 
     function RequestProfileData() {
         // Silently acquires an access token which is then attached to a request for MS Graph data
-        instance
-            .acquireTokenSilent({
-                ...loginRequest,
-                account: accounts[0],
-            })
-            .then((response) => {
-                console.log("Graph API Token : " + response.accessToken);
-                callMsGraph(response.accessToken).then((response) => setGraphData(response));
-            });
+        instance.acquireTokenSilent({...loginRequest,account: accounts[0],}).then((response) => {
+            console.log("Graph API Token : " + response.accessToken);
+            callMsGraph(response.accessToken).then((response) => setGraphData(response));
+        });
     }
 
     function RequestUserData() {
         // Silently acquires an access token which is then attached to a request for Rest API data
-        instance
-            .acquireTokenSilent({
-                ...apiLoginRequest,
-                account: accounts[0],
-            })
-            .then((response) => {
-                console.log("Rest API Token : " + response.accessToken);
-                callR1RestApi(response.accessToken).then((response) => setGraphData(response));
-            });
+        instance.acquireTokenSilent({...apiLoginRequest,account: accounts[0],}).then((response) => {
+            console.log("Rest API Token : " + response.accessToken);
+            callR1RestApi(response.accessToken).then((response) => setGraphData(response));
+        });
     }
 
     return (

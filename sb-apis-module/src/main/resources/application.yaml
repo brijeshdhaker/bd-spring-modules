@@ -37,7 +37,8 @@ spring:
     username: sa
     password: sa
     driverClassName: org.h2.Driver
-    jdbcUrl: jdbc:h2:mem:${spring.application.name};DB_CLOSE_DELAY=-1;mode=mysql;
+    jdbcUrl: jdbc:h2:mem:${spring.application.name}-DC-R0;DB_CLOSE_DELAY=-1;mode=mysql;
+    #jdbcUrl: jdbc:h2:file:/apps/sandbox/h2/${spring.application.name}-DC-R0;mode=mysql;DB_CLOSE_ON_EXIT=FALSE;DB_CLOSE_DELAY=-1;
     hikari:
       pool-name: default
       maximum-pool-size: 10
@@ -47,7 +48,6 @@ spring:
       max-lifetime: 1800000
       connection-test-query: SELECT 1
       auto-commit: true
-    #url: jdbc:h2:file:/apps/sandbox/h2/${spring.application.name};mode=mysql;DB_CLOSE_ON_EXIT=FALSE;DB_CLOSE_DELAY=-1;
     region1:
       jdbcUrl: jdbc:h2:mem:${spring.application.name}-DC-R1;mode=mysql;DB_CLOSE_DELAY=-1;
       #jdbcUrl: jdbc:h2:file:/apps/sandbox/h2/${spring.application.name}-DC-R1;mode=mysql;DB_CLOSE_ON_EXIT=FALSE;DB_CLOSE_DELAY=-1;

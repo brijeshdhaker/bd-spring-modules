@@ -51,6 +51,10 @@ spring:
 #
   cloud:
     gateway:
+#      globalcors:
+#        cors-configurations:
+#          '[/**]':
+#            allowedOrigins: '*'
       routes:
         #
         - id: sb-apis-module-r1

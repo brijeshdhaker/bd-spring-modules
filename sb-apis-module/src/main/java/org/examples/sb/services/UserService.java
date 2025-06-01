@@ -46,7 +46,7 @@ public class UserService {
         return userRepository.save(userEntity);
     }
 
-    public List<User> getAllUsers() {
+    public List<User> getAllUsers() throws AppException {
         /* 
         Converter<Set<RoleEntity>, List<Role>> convertIdentities = new AbstractConverter<>() {
             protected List<Role> convert(Set<RoleEntity> source) {

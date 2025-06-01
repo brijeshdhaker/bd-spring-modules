@@ -27,7 +27,7 @@ public class SBApisModule {
 
 	public static void main(String[] args) {
 
-		log.info("SB Backend Application Starting...");
+		log.info("SB Backend APIs Starting...");
 		/*
 		SpringApplication application = new SpringApplication(SBBackendApplication.class);
 		ApplicationContextInitializer<ConfigurableApplicationContext> yamlInitializer = new YamlLoaderInitializer("application.yml");
@@ -35,7 +35,7 @@ public class SBApisModule {
 		application.run(args);
 		*/
 		SpringApplication.run(SBApisModule.class, args);
-		log.info("SB Backend Application Started...");
+		log.info("SB Backend APIs Started...");
 
 	}
 

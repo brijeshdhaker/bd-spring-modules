@@ -9,6 +9,8 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.examples.sb.exceptions.AppException;
+import org.examples.sb.exceptions.ExceptionType;
+import org.examples.sb.exceptions.NotFoundException;
 import org.examples.sb.models.AppRestResponse;
 import org.examples.sb.models.User;
 import org.examples.sb.repositories.entities.UserEntity;
@@ -24,6 +26,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestClient;
+import org.springframework.web.server.ResponseStatusException;
 
 
 @Slf4j
@@ -57,18 +60,15 @@ public class UserController {
 
     @PostMapping
     @PreAuthorize("hasAuthority('SCOPE_User.Write')")
-    public ResponseEntity<?> createUser(@RequestBody User user) {
-        ResponseEntity<AppRestResponse> httpResponse;
-        AppRestResponse appResponse;
-        try {
+    public ResponseEntity<?> createUser(@RequestBody User user) throws AppException {
+        //
+        if(user != null) {
             userService.saveUser(user);
-            appResponse  = new AppRestResponse("User successfully added in system.");
-            httpResponse = new ResponseEntity<>(appResponse, HttpStatus.CREATED);
-        } catch (Exception ex) {
-            appResponse  = new AppRestResponse(ex.getMessage());
-            httpResponse = new ResponseEntity<>(appResponse,HttpStatus.INTERNAL_SERVER_ERROR);
+            AppRestResponse appResponse = new AppRestResponse("User successfully added in system.");
+            return new ResponseEntity<>(appResponse, HttpStatus.CREATED);
+        }else {
+            throw new AppException(ExceptionType.SERVICE_EXCEPTION,"User can not be blank or null");
         }
-        return httpResponse;
     }
 
 
@@ -83,36 +83,40 @@ public class UserController {
     })
     @GetMapping
     @PreAuthorize("hasAuthority('SCOPE_User.Read')")
-    public Iterable<User> getAllUsers() {
+    public Iterable<User> getAllUsers() throws AppException {
         return userService.getAllUsers();
     }
 
     @GetMapping("/{id}")
     @PreAuthorize("hasAuthority('SCOPE_User.Write')")
     public User getUserById(@PathVariable Long id) {
-        return userService.getUserById(id);
+        try {
+            return userService.getUserById(id);
+        } catch (NotFoundException ex) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Requested user not found.", ex);
+        }
     }
 
     @DeleteMapping("/{id}")
     @PreAuthorize("hasAuthority('SCOPE_User.Write')")
-    public ResponseEntity<?> deleteUser(@PathVariable Long id) {
-        ResponseEntity<?> httpResponse;
-        AppRestResponse appResponse;
+    public ResponseEntity<?> deleteUser(@PathVariable Long id) throws AppException {
         try {
             Boolean result = userService.deleteUserById(id);
-            if(result){
-                appResponse  = new AppRestResponse(String.format("User with id %d successfully deleted.",id));
-                httpResponse =  new ResponseEntity<>(appResponse, HttpStatus.OK);
-            }else {
-                appResponse  = new AppRestResponse(String.format("User with id %d not found in system.",id));
-                httpResponse =  new ResponseEntity<>(appResponse,HttpStatus.NOT_FOUND);
-            }
-        } catch(AppException ex) {
-            // log.error(ex.getMessage(),ex);
-            appResponse  = new AppRestResponse(ex.getMessage());
-            httpResponse = new ResponseEntity<>(appResponse,HttpStatus.INTERNAL_SERVER_ERROR);
+            AppRestResponse appResponse  = new AppRestResponse(String.format("User with id %d successfully deleted.",id));
+            return new ResponseEntity<>(appResponse, HttpStatus.OK);
+        } catch (NotFoundException ex) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, String.format("User with id %d not found in system.",id), ex);
         }
-        return  httpResponse;
     }
 
+    // Local Exception Handling (Controller-Level)
+    /*
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ExceptionHandler(exception={AppException.class, Exception.class}, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> handleUnexpectedErrors(HttpServletRequest req, Exception e) {
+        log.error("Unexpected error occurred on request: " + req.getServletPath(), e);
+        AppRestResponse appResponse  = new AppRestResponse(e.getMessage());
+        return new ResponseEntity<>(appResponse,HttpStatus.BAD_REQUEST);
+    }
+    */
 }

@@ -1,6 +1,9 @@
 package org.examples.sb.controllers;
 
 import org.springframework.http.*;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.oauth2.core.oidc.user.OidcUser;
+import org.springframework.ui.Model;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -46,4 +52,13 @@ public class AuthController {
         }
         return response;
     }
+
+    @GetMapping("/authorize")
+    public ResponseEntity<?> authorize(@AuthenticationPrincipal OidcUser oidcUser) {
+        Map<String,String> user = new HashMap();
+        user.put("email", oidcUser.getEmail());
+        user.put("name",oidcUser.getGivenName());
+        return new ResponseEntity<Map<String,String>>(user, HttpStatus.OK);
+    }
+
 }
