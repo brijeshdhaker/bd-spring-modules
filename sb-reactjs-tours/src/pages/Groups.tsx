@@ -9,7 +9,7 @@ import { useCookies } from 'react-cookie';
 const Groups = () => {
   
   const [loading, setLoading] = useState(false);
-  const[users, setUsers] = useState([]);
+  const[groups, setGroups] = useState([]);
   const[dispaly, setDispaly] = useState(true);
   const [cookies] = useCookies(['XSRF-TOKEN']);
 
@@ -19,16 +19,16 @@ const Groups = () => {
 
   useEffect(() => {
       //
-      if(users.length === 0){
-        get('/api/v1/users').then((response) => {
+      if(groups.length === 0){
+        get('/api/v1/groups').then((response) => {
             console.log(response.data);
-            setUsers(response.data)
+            setGroups(response.data)
             setLoading(false);
         }).catch(()=> {
             setLoading(false);
         });
       }
-  }, [users]); // Effect runs when user details changes
+  }, [groups]); // Effect runs when user details changes
 
   const remove = async (id) => {
     await fetch(`/group/${id}`, {
@@ -45,16 +45,16 @@ const Groups = () => {
     });
   }
 
-  const userList = users.map((user, index) => {
-    const address = `${user.id || ''} ${user.name || ''} ${user.email || ''}`;
-    return <tr key={user.id}>
+  const userList = groups.map((group, index) => {
+    const address = `${group.id || ''} ${group.name || ''} ${group.email || ''}`;
+    return <tr key={group.id}>
       <td style={{whiteSpace: 'nowrap'}}>{index}</td>
-      <td>{user.name}</td>
-      <td>{user.email}</td>
+      <td>{group.name}</td>
+      <td>{group.email}</td>
       <td>
         <ButtonGroup>
-          <Link className="btn btn-success" role="button" to={"/group/" + user.id} >Edit</Link>
-          <Link className="btn btn-danger" role="button" onClick={() => remove(user.id)} >Delete</Link>
+          <Link className="btn btn-success" role="button" to={"/group/" + group.id} >Edit</Link>
+          <Link className="btn btn-danger" role="button" onClick={() => remove(group.id)} >Delete</Link>
         </ButtonGroup>
       </td>
     </tr>
