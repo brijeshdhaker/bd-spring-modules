@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import PropTypes from 'prop-types';
-import {loginRequestScope} from '../utils/authConfig';
+import {getScopes} from '../utils/authConfig';
 
 import { useIsAuthenticated, AuthenticatedTemplate, UnauthenticatedTemplate, useMsal } from '@azure/msal-react';
 
@@ -14,11 +14,11 @@ function SignInButton(){
 
   const handleLogin = (loginType: string) => {
       if (loginType === "popup") {
-          instance.loginPopup(loginRequestScope).catch(e => {
+          instance.loginPopup(getScopes("graph")).catch(e => {
               console.log(e);
           });
       } else if (loginType === "redirect") {
-          instance.loginRedirect(loginRequestScope).catch(e => {
+          instance.loginRedirect(getScopes("graph")).catch(e => {
               console.log(e);
           });
       }

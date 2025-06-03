@@ -1,21 +1,34 @@
 #
+echo "# bd-spring-moduless" >> README.md
+git init
+git add *
+git commit -m "first commit"
+git remote add origin https://github.com/sunilvb/bd-spring-moduless.git
+git push -u origin master
+
+
+git add *
+git commit -m "first commit"
+git push -u origin master
+
+#
 ### https://helm.sh/docs/intro/cheatsheet/
 #
 -Dspring.profiles.active=cloud
 -Dserver.servlet.context-path=/api/v1
--Dspring.config.location=./bd-spring-module/helm-chart/configs/application-local.yaml
+-Dspring.config.location=./bd-spring-modules/helm-chart/configs/application-local.yaml
 
 # default
-mvn spring-boot:run -Dmaven.multiModuleProjectDirectory=./bd-spring-module -Dspring.config.location=./bd-spring-module/helm-chart/configs/application.yaml
+mvn spring-boot:run -Dmaven.multiModuleProjectDirectory=./bd-spring-modules -Dspring.config.location=./bd-spring-modules/helm-chart/configs/application.yaml
 
 # local
--Dspring.profiles.active=local -Dspring.config.location=bd-spring-module/helm-chart/configs/application-local.yaml
+-Dspring.profiles.active=local -Dspring.config.location=bd-spring-modules/helm-chart/configs/application-local.yaml
 
 # docker
--Dspring.profiles.active=docker -Dspring.config.location=bd-spring-module/helm-chart/configs/application-docker.yaml
+-Dspring.profiles.active=docker -Dspring.config.location=bd-spring-modules/helm-chart/configs/application-docker.yaml
 
 # k8s
--Dspring.profiles.active=k8s -Dspring.config.location=bd-spring-module/helm-chart/configs/application-k8s.yaml
+-Dspring.profiles.active=k8s -Dspring.config.location=bd-spring-modules/helm-chart/configs/application-k8s.yaml
 
 mvn spring-boot:run
 mvn spring-boot:run -Dspring-boot.run.profiles=azuread
@@ -70,12 +83,12 @@ kubectl -n istio-system get secret ingress-mtls-credential --output=yaml
 
 # Create Chart
 ```shell
-helm create ./bd-spring-module/helm-chart --namespace sb-apps
+helm create ./bd-spring-modules/helm-chart --namespace sb-apps
 ```
 # template
 ```shell
 #
-helm template bd-spring-module ./bd-spring-module/helm-chart \
+helm template bd-spring-modules ./bd-spring-modules/helm-chart \
 --namespace=sb-apps \
 --set author=brijeshdhaker@gmail.com \
 --set image.pullPolicy=Always \
@@ -84,10 +97,10 @@ helm template bd-spring-module ./bd-spring-module/helm-chart \
 --version=1.0.0 \
 --dry-run \
 --debug \
---output-dir ./bd-spring-module/helm-chart/manifests
+--output-dir ./bd-spring-modules/helm-chart/manifests
 
 #
-helm template bd-spring-module ./bd-spring-module/helm-chart \
+helm template bd-spring-modules ./bd-spring-modules/helm-chart \
 --namespace=sb-apps \
 --set author=brijeshdhaker@gmail.com \
 --set image.pullPolicy=Always \
@@ -95,10 +108,10 @@ helm template bd-spring-module ./bd-spring-module/helm-chart \
 --create-namespace=true \
 --version=1.0.0 \
 --debug \
-> ./bd-spring-module/helm-chart/manifests/bd-spring-module.yaml
+> ./bd-spring-modules/helm-chart/manifests/bd-spring-modules.yaml
 
 #
-helm template bd-spring-module ./bd-spring-module/helm-chart/distro/bd-spring-module-0.1.0.tgz \
+helm template bd-spring-modules ./bd-spring-modules/helm-chart/distro/bd-spring-modules-0.1.0.tgz \
 --namespace=sb-apps \
 --set author=brijeshdhaker@gmail.com \
 --set image.pullPolicy=Always \
@@ -106,17 +119,17 @@ helm template bd-spring-module ./bd-spring-module/helm-chart/distro/bd-spring-mo
 --create-namespace=true \
 --debug \
 --dry-run \
---output-dir ./bd-spring-module/helm-chart/manifests/
+--output-dir ./bd-spring-modules/helm-chart/manifests/
 
 ```
 
 # Distro
 ```shell
-helm package ./bd-spring-module/helm-chart --destination ./bd-spring-module/helm-chart/distro
+helm package ./bd-spring-modules/helm-chart --destination ./bd-spring-modules/helm-chart/distro
 ```
 # Install Always IfNotPresent
 ```shell
-helm install bd-spring-module ./bd-spring-module/helm-chart \
+helm install bd-spring-modules ./bd-spring-modules/helm-chart \
 --namespace=sb-apps \
 --set author=brijeshdhaker@gmail.com \
 --set image.pullPolicy=Always \
@@ -125,10 +138,10 @@ helm install bd-spring-module ./bd-spring-module/helm-chart \
 --create-namespace=true \
 --debug \
 --dry-run \
-> ./bd-spring-module/helm-chart/manifests/bd-spring-module.yaml
+> ./bd-spring-modules/helm-chart/manifests/bd-spring-modules.yaml
 
 #
-helm install bd-spring-module ./bd-spring-module/helm-chart/distro/bd-spring-module-0.1.0.tgz \
+helm install bd-spring-modules ./bd-spring-modules/helm-chart/distro/bd-spring-modules-0.1.0.tgz \
 --namespace=sb-apps \
 --set author=brijeshdhaker@gmail.com \
 --set image.pullPolicy=Always \
@@ -137,12 +150,12 @@ helm install bd-spring-module ./bd-spring-module/helm-chart/distro/bd-spring-mod
 --create-namespace=true \
 --debug \
 --dry-run \
-> ./bd-spring-module/helm-chart/manifests/bd-spring-module.yaml
+> ./bd-spring-modules/helm-chart/manifests/bd-spring-modules.yaml
 
 ```
 # Upgrade
 ```shell
-helm upgrade bd-spring-module ./bd-spring-module/helm-chart \
+helm upgrade bd-spring-modules ./bd-spring-modules/helm-chart \
 --namespace=sb-apps \
 --set author=brijeshdhaker@gmail.com \
 --set image.pullPolicy=Always \
@@ -152,27 +165,27 @@ helm upgrade bd-spring-module ./bd-spring-module/helm-chart \
 --install \
 --debug \
 --dry-run \
---output-dir ./bd-spring-module/helm-chart/manifests/
+--output-dir ./bd-spring-modules/helm-chart/manifests/
 ```
 #
 ```shell
-helm show values ./bd-spring-module/helm-chart
+helm show values ./bd-spring-modules/helm-chart
 ```
 
 #
 ```shell
-helm get manifest bd-spring-module -n sb-apps > ./bd-spring-module/helm-chart/manifests/bd-spring-module.yaml
+helm get manifest bd-spring-modules -n sb-apps > ./bd-spring-modules/helm-chart/manifests/bd-spring-modules.yaml
 ```
 #
 ```shell
 helm list --all-namespaces
 helm ls --namespace=sb-apps
 
-helm status bd-spring-module --namespace=sb-apps
-helm history bd-spring-module --namespace=sb-apps
+helm status bd-spring-modules --namespace=sb-apps
+helm history bd-spring-modules --namespace=sb-apps
 
-helm uninstall bd-spring-module --namespace=sb-apps
-helm delete bd-spring-module --namespace=sb-apps
+helm uninstall bd-spring-modules --namespace=sb-apps
+helm delete bd-spring-modules --namespace=sb-apps
 ```
 #
 ```shell
@@ -180,14 +193,14 @@ kubectl --namespace=sb-apps get all
 kubectl --namespace=sb-apps get pods --show-labels
 kubectl --namespace=sb-apps get hpa
 
-export POD_NAME=$(kubectl get pods --namespace sb-apps -l "app.kubernetes.io/name=springboot-app,app.kubernetes.io/instance=bd-spring-module" -o jsonpath="{.items[0].metadata.name}")
+export POD_NAME=$(kubectl get pods --namespace sb-apps -l "app.kubernetes.io/name=springboot-app,app.kubernetes.io/instance=bd-spring-modules" -o jsonpath="{.items[0].metadata.name}")
 kubectl --namespace=sb-apps exec -it pod/$POD_NAME -- /bin/bash
   
 ```
 #
 ```shell
-helm repo add bd-spring-module https://nexus.repo.com --namespace sb-apps 
-helm repo update bd-spring-module https://nexus.repo.com
+helm repo add bd-spring-modules https://nexus.repo.com --namespace sb-apps 
+helm repo update bd-spring-modules https://nexus.repo.com
 ```
 # 
 # Label the namespace that will host the application with istio-injection=enabled

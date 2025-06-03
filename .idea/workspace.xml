@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="30633151-d715-4afb-8728-2a26e7f9ee44" name="Changes" comment="2025-06-03 Update reactjs modules">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-reactjs-module/src/components/AppNavbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sb-reactjs-module/src/components/AppNavbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-reactjs-module/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sb-reactjs-module/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sb-reactjs-module/src/components/SignInButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sb-reactjs-module/src/components/SignInButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sb-reactjs-module/src/services/ApiServices.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sb-reactjs-module/src/services/ApiServices.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sb-reactjs-module/src/utils/authConfig.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sb-reactjs-module/src/utils/authConfig.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +112,7 @@
       <command value="npm run dev" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.sb-server-module">
+  <component name="RunManager" selected="Application.sb-api-module-r0">
     <configuration name="sb-api-module-r0" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="org.examples.sb.SBApisModule" />
       <module name="sb-apis-module" />
@@ -355,7 +357,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748917462193</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="2025-06-03 Update reactjs modules">
+      <option name="closed" value="true" />
+      <created>1748918122363</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1748918122363</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { getScopes, loginRequestScope } from "../utils/authConfig";
+import { getScopes,} from "../utils/authConfig";
 import { msalInstance } from "../utils/AuthenticationService";
 
 
@@ -26,7 +26,8 @@ const RestClient = axios.create({
 export async function loadUserDetails() {
     const instance = msalInstance;
     //const { instance, accounts } = useMsal();
-    const graphTokenRequest = { ...loginRequestScope, account: instance.getAllAccounts()[0]}
+    let scopes = getScopes("graph");
+    const graphTokenRequest = { ...scopes, account: instance.getAllAccounts()[0]}
     if (graphTokenRequest.account) {
         const accessTokenResponse = await instance.acquireTokenSilent(graphTokenRequest)
         return accessTokenResponse.account;
@@ -41,7 +42,8 @@ export async function loadUserDetails() {
 export async function loadProfile() {
     const instance = msalInstance;
     //const { instance, accounts } = useMsal();
-    const graphTokenRequest = { ...loginRequestScope, account: instance.getAllAccounts()[0]}
+    let scopes = getScopes("graph");
+    const graphTokenRequest = { ...scopes, account: instance.getAllAccounts()[0]}
     if (graphTokenRequest.account) {
         const accessTokenResponse = await instance.acquireTokenSilent(graphTokenRequest)
         return accessTokenResponse.account;
@@ -51,8 +53,8 @@ export async function loadProfile() {
 }
 
 export const profile = async () => {
-    
-    const graphTokenRequest = { ...loginRequestScope, account: msalInstance.getAllAccounts()[0]}
+    let scopes = getScopes("graph");
+    const graphTokenRequest = { ...scopes, account: msalInstance.getAllAccounts()[0]}
     const accessToken = await msalInstance.acquireTokenSilent(graphTokenRequest);
     if (accessToken) {
         RestClient.defaults.headers.common['Authorization'] = `Bearer ${accessToken.accessToken}`;
@@ -103,10 +105,11 @@ export const authorize = async () => {
 
 
 /** **/
-async function getToken(){
+async function getAccessToken(){
     const instance = msalInstance;
     //const { instance, accounts } = useMsal();
-    const apiTokenRequest = { ...getScopes(), account: instance.getAllAccounts()[0]}
+    let scopes = getScopes("api");
+    const apiTokenRequest = { ...scopes, account: instance.getAllAccounts()[0]}
     if (apiTokenRequest.account) {
         const accessTokenResponse = await instance.acquireTokenSilent(apiTokenRequest)
         return `Bearer ${accessTokenResponse.accessToken}`;
@@ -116,7 +119,7 @@ async function getToken(){
 
 const authenticatedRestCall = async (restApiCall) => {
 
-    return getToken().then(async (token : string | null ) => {
+    return getAccessToken().then(async (token : string | null ) => {
         RestClient.defaults.headers.common['Authorization'] = token;
         return await restApiCall()
     })
