@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -13,24 +14,71 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
         </processorPath>
-        <module name="sb-backend-module-r1" />
+        <module name="sb-reactjs-module" />
+      </profile>
+      <profile name="Annotation profile for sb-apis-module" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
+        </processorPath>
+        <module name="sb-apis-module" />
+      </profile>
+      <profile name="Annotation profile for sb-discovery-service" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
+        </processorPath>
         <module name="sb-discovery-service" />
-        <module name="sb-frontend-module" />
+      </profile>
+      <profile name="Annotation profile for sb-gateway-module" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
+        </processorPath>
         <module name="sb-gateway-module" />
-        <module name="sb-backend-module-r2" />
+      </profile>
+      <profile name="Annotation profile for sb-server-module" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
+        </processorPath>
+        <module name="sb-server-module" />
+      </profile>
+      <profile name="Annotation profile for sb-utilities-module" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
+        </processorPath>
         <module name="sb-utilities-module" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="sb-backend-module-r2" target="17" />
+      <module name="sb-reactjs-tours" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="bd-spring-modules" options="-parameters" />
-      <module name="sb-backend-module-r1" options="-parameters" />
+      <module name="sb-apis-module" options="-parameters" />
       <module name="sb-backend-module-r2" options="-parameters" />
       <module name="sb-discovery-service" options="-parameters" />
-      <module name="sb-frontend-module" options="-parameters" />
       <module name="sb-gateway-module" options="-parameters" />
+      <module name="sb-reactjs-module" options="-parameters" />
+      <module name="sb-reactjs-tours" options="-parameters" />
+      <module name="sb-server-module" options="-parameters" />
       <module name="sb-utilities-module" options="-parameters" />
     </option>
   </component>

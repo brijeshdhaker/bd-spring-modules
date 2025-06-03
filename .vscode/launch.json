@@ -13,35 +13,24 @@
         },
         {
             "type": "java",
-            "name": "sb-frontend-module",
+            "name": "sb-server-module",
             "request": "launch",
             "cwd": "${workspaceFolder}",
-            "mainClass": "org.examples.sb.SBFrontendModule",
-            "projectName": "sb-frontend-module",
+            "mainClass": "org.examples.sb.SBServerModule",
+            "projectName": "sb-server-module",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         },
         {
             "type": "java",
-            "name": "sb-backend-module-r1",
+            "name": "sb-apis-module",
             "request": "launch",
             "cwd": "${workspaceFolder}",
-            "mainClass": "org.examples.sb.SBBackendApplication",
-            "projectName": "sb-backend-module-r1",
+            "mainClass": "org.examples.sb.SBApisModule",
+            "projectName": "sb-apis-module",
             "args": "",
             "envFile": "${workspaceFolder}/.env",
-            "vmArgs": ""
-        },
-        {
-            "type": "java",
-            "name": "sb-backend-module-r2",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "mainClass": "org.examples.sb.SBBackendApplication",
-            "projectName": "sb-backend-module-r2",
-            "args": "",
-            "envFile": "${workspaceFolder}/.env",
-            "vmArgs": ""
+            "vmArgs": "-Dspring.profiles.active=r0"
         },
         {
             "type": "java",

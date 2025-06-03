@@ -1,7 +1,8 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="sb-api-module-r2" type="Application" factoryName="Application">
-    <option name="MAIN_CLASS_NAME" value="org.examples.sb.SBBackendApplication" />
-    <module name="sb-backend-module-r2" />
+    <option name="MAIN_CLASS_NAME" value="org.examples.sb.SBApisModule" />
+    <module name="sb-apis-module" />
+    <option name="VM_PARAMETERS" value="-Dspring.profiles.active=r2" />
     <extension name="coverage">
       <pattern>
         <option name="PATTERN" value="org.examples.sb.*" />

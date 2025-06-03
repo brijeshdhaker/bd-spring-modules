@@ -2,14 +2,17 @@ package org.examples.sb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
+import org.springframework.stereotype.Controller;
+// import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
 
+@Controller
 @SpringBootApplication
-@EnableWebFluxSecurity
+//@EnableWebFluxSecurity
 public class SbGatewayModuleApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SbGatewayModuleApplication.class, args);
 	}
+
 
 }
