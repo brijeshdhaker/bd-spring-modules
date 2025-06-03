@@ -59,14 +59,14 @@ public class SpringSecurityConfig {
                         .jwtAuthenticationConverter(jwtAuthenticationConverter())
                         .jwkSetUri(jwkSetUri)
                 ))
-        //.cors(Customizer.withDefaults())
+        .cors(Customizer.withDefaults())
         //.httpBasic(Customizer.withDefaults())
-        /*.csrf((csrf) -> csrf
+        .csrf((csrf) -> csrf
                 .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
                 .csrfTokenRequestHandler(new CsrfTokenRequestAttributeHandler())
         )
         .addFilterAfter(new CookieCsrfFilter(), BasicAuthenticationFilter.class)
-        .addFilterAfter(new SpaWebFilter(), BasicAuthenticationFilter.class)*/;
+        .addFilterAfter(new SpaWebFilter(), BasicAuthenticationFilter.class);
 
         // @formatter:on
         return http.build();
