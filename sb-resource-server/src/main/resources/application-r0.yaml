@@ -1,0 +1,17 @@
+#
+server:
+  port: 8085
+  servlet:
+    context-path: /api/v1
+  http2:
+    enabled: true
+#
+spring:
+  #
+  config:
+    activate:
+      on-profile: r0
+  #
+  application:
+    name: sb-resource-server-00
+    instance-id: DC-R0

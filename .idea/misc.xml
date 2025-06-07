@@ -11,6 +11,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/sb-apis-module/pom.xml" />
         <option value="$PROJECT_DIR$/sb-backend-module-r2/pom.xml" />
       </set>
     </option>

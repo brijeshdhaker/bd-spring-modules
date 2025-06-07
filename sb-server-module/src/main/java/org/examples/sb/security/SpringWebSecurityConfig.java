@@ -52,6 +52,9 @@ public class SpringWebSecurityConfig {
     @Value("${spring.security.oauth2.client.registration.azure-dev.client-id}")
     private String clientId;
 
+    @Value("${spring.security.oauth2.resourceserver.jwt.jwk-set-uri}")
+    protected String jwkSetUri;
+
     @Bean
     public WebSecurityCustomizer webSecurityCustomizer() {
         return (web) -> web.ignoring().requestMatchers(new AntPathRequestMatcher("/h2-console/**"));
@@ -70,13 +73,37 @@ public class SpringWebSecurityConfig {
     */
 
     @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+
+        // @formatter:off
+        http.authorizeHttpRequests((requests) -> requests
+                        // All API URLs must be authenticated.
+                        .requestMatchers("/api/v1/**").authenticated()
+                        // All other paths allowed without auth.
+                        .anyRequest().permitAll()
+                )
+                //.oauth2ResourceServer(oauth2ResourceServer -> oauth2ResourceServer.jwt(jwt -> jwt.jwkSetUri(jwkSetUri)))
+                .oauth2Login(Customizer.withDefaults())
+                .cors(Customizer.withDefaults())
+                //.httpBasic(Customizer.withDefaults())
+                .csrf((csrf) -> csrf
+                        .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
+                        .csrfTokenRequestHandler(new CsrfTokenRequestAttributeHandler())
+                );
+
+        // @formatter:on
+        return http.build();
+    }
+
+    /*
+    @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http, JwtAuthorizationProperties jwtprops) throws Exception {
 
         // @formatter:off
         http.authorizeHttpRequests((requests) -> requests
                 // the / and /home paths are configured to not require any authentication.
                 //.requestMatchers("/", "/home").permitAll()
-                .requestMatchers("/", "/index.html", "/images/**", "/static/**",
+                .requestMatchers("/", "/index.html", "/images/**", "/static/**","/login/**","/oauth2/**",
                                 "/*.ico", "/*.json", "/*.png", "/api/user", "/groups", "/group/**").permitAll()
                 // All other paths must be authenticated.
                 .anyRequest().authenticated())
@@ -98,11 +125,11 @@ public class SpringWebSecurityConfig {
         )
         .addFilterAfter(new CookieCsrfFilter(), BasicAuthenticationFilter.class)
         .addFilterAfter(new SpaWebFilter(), BasicAuthenticationFilter.class);
-        */
+        */ /*
         // @formatter:on
         return http.build();
     }
-
+    */
     private LogoutHandler logoutHandler() {
         return (request, response, authentication) -> {
             try {

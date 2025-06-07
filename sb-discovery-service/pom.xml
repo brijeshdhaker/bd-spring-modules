@@ -11,26 +11,8 @@
 	<groupId>org.examples.sb</groupId>
 	<artifactId>sb-discovery-service</artifactId>
 	<name>sb-discovery-service</name>
-	<description>Demo project for Spring Boot</description>
+	<description>sb-discovery-service</description>
 	
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
-	<properties>
-		<java.version>17</java.version>
-		<spring-cloud.version>2024.0.1</spring-cloud.version>
-	</properties>
-
 	<build>
 		<finalName>sb-discovery-service</finalName>
 		<plugins>

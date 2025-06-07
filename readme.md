@@ -370,3 +370,5 @@ kubectl -n sb-apps create secret docker-registry docker-reg-cred --docker-server
 kubectl get secret docker-reg-cred --output="jsonpath={.data.\.dockerconfigjson}" | base64 --decode
 kubectl patch serviceaccount default -p '{"imagePullSecrets": [{"name": "docker-reg-cred"}]}'
 ```
+
+https://login.microsoftonline.com/da5ac8f7-13d6-46e7-815d-012b01123148/v2.0/.well-known/openid-configuration

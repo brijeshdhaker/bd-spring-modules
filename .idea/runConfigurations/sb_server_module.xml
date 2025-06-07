@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="sb-server-module" type="Application" factoryName="Application">
-    <option name="MAIN_CLASS_NAME" value="org.examples.sb.SBServerModule" />
+    <option name="MAIN_CLASS_NAME" value="org.examples.sb.ServerApplication" />
     <module name="sb-server-module" />
     <extension name="coverage">
       <pattern>

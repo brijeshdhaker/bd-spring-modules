@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { get } from '../services/ApiServices';
+//import { get } from '../services/ApiServices';
+import { get } from '../helpers/fetch-api';
 import Button from 'react-bootstrap/esm/Button';
 import Table from 'react-bootstrap/Table';
 import { ButtonGroup, Container } from 'react-bootstrap';
@@ -20,9 +21,9 @@ const Users = () => {
   useEffect(() => {
       //
       if(users.length === 0){
-        get('/api/v1/users').then((response) => {
-            console.log(response.data);
-            setUsers(response.data)
+        get('/api/v1/users').then((response) => response.json()).then((data) => {
+            console.log(data);
+            setUsers(data)
             setLoading(false);
         }).catch(()=> {
             setLoading(false);

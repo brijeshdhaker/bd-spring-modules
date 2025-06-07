@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="sb-gateway-module" type="Application" factoryName="Application">
-    <option name="MAIN_CLASS_NAME" value="org.examples.sb.SbGatewayModuleApplication" />
+    <option name="MAIN_CLASS_NAME" value="org.examples.sb.GatewayApplication" />
     <module name="sb-gateway-module" />
     <extension name="coverage">
       <pattern>

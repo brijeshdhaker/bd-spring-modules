@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: sb-discovery-service
+    instance-id: global
+  output.ansi.enabled: ALWAYS
+
+server:
+  port: 8761
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: false
+  server:
+    peerNodeReadTimeoutMs: 10000
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}-${spring.application.instance-id}
+    lease-expiration-duration-in-seconds: 30
+    lease-renewal-interval-in-seconds: 10
+
+#
+management:
+  security:
+    enabled: false
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    info:
+      enabled: true
