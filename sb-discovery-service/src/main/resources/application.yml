@@ -4,9 +4,9 @@ spring:
     instance-id: global
   output.ansi.enabled: ALWAYS
   
-  devtools:
-    livereload:
-      enabled: true
+  # devtools:
+  #   livereload:
+  #     enabled: true
       
 server:
   port: 8761
@@ -25,16 +25,16 @@ eureka:
 
 
 #
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-    jmx:
-      exposure:
-        include: "*"
-    access:
-      default: READ_ONLY
-  endpoint:
-    info:
-      access: READ_ONLY
+# management:
+#   endpoints:
+#     web:
+#       exposure:
+#         include: "*"
+#     jmx:
+#       exposure:
+#         include: "*"
+#     access:
+#       default: READ_ONLY
+#   endpoint:
+#     info:
+#       access: READ_ONLY

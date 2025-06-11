@@ -1,0 +1,133 @@
+#
+server:
+  port: 8080
+#  servlet:
+#    context-path:
+  http2:
+    enabled: true
+#
+baeldung:
+  jwt:
+    mapping:
+      authorities-prefix: "MY_SCOPE_"
+      principal-claim-name: preferred_username
+      scopes:
+        profile: profile.read
+        "profile_read": profile.read
+#
+azure:
+  tenant:
+    id: "da5ac8f7-13d6-46e7-815d-012b01123148"
+  client:
+    id: "c5c062d8-4fe2-4319-9897-a59e57ed7ad2"
+    secret: "fXo8Q~qQgHPaJtyViMQMM_PQxSsRAN6uvqPTtdia"
+#
+spring:
+  application:
+    name: sb-server-module
+    instance-id: global
+  output.ansi.enabled: ALWAYS
+  #
+  devtools:
+    livereload:
+      enabled: true
+  #
+  datasource:
+    name: ${spring.application.name}-db
+    username: sa
+    password: sa
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:${spring.application.name};DB_CLOSE_DELAY=-1;mode=mysql;
+    hikari:
+      pool-name: default
+      maximum-pool-size: 10
+      minimum-idle: 2
+      idle-timeout: 60000
+      connection-timeout: 30000
+      max-lifetime: 1800000
+      connection-test-query: SELECT 1
+      auto-commit: true
+  #
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        trace: false
+        web-allow-others: true
+  #
+  jpa:
+    hibernate:
+      ddl-auto: update
+      use-new-id-gnerator-mappings: false
+      dialect: org.hibernate.dialect.H2Dialect
+    properties:
+      hibernate:
+        show-sql: true
+        use-sql-comments: true
+        format-sql: true
+        type: info
+  #
+  security:
+    oauth2:
+      client:
+        provider:
+          azure:
+            issuer-uri: https://login.microsoftonline.com/da5ac8f7-13d6-46e7-815d-012b01123148/v2.0
+            token-uri: https://login.microsoftonline.com/da5ac8f7-13d6-46e7-815d-012b01123148/oauth2/v2.0/token
+            jwk-set-uri: https://login.microsoftonline.com/da5ac8f7-13d6-46e7-815d-012b01123148/discovery/v2.0/keys
+#            user-info-uri: https://graph.microsoft.com/oidc/userinfo
+            user-name-attribute: name
+        registration:
+          azure-dev:
+            provider: azure
+            client-id: c5c062d8-4fe2-4319-9897-a59e57ed7ad2
+            client-secret: fXo8Q~qQgHPaJtyViMQMM_PQxSsRAN6uvqPTtdia
+            redirect-uri-template: "{baseUrl}/login/oauth2/code/{registrationId}"
+#            authorization-grant-type: authorization_code
+            scope:
+              - openid
+              - email
+              - profile
+      resourceserver:
+        id: ${spring.application.name}
+        jwt:
+          jwk-set-uri: https://login.microsoftonline.com/da5ac8f7-13d6-46e7-815d-012b01123148/discovery/v2.0/keys
+#
+
+#
+eureka:
+  client:
+    service-url:
+      defaultZone: http://sb-discovery-service:8761/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}-${spring.application.instance-id}
+    lease-expiration-duration-in-seconds: 30
+    lease-renewal-interval-in-seconds: 10    
+
+#
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    jmx:
+      exposure:
+        include: "*"
+    access:
+      default: READ_ONLY
+  endpoint:
+    info:
+      access: READ_ONLY
+
+#
+logging:
+  level:
+    root: info
+    org.springframework.web: INFO
+    org.springframework.security: INFO
+    org.springframework.security.oauth2: INFO
+    org.springframework.transaction: trace

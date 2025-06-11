@@ -14,8 +14,7 @@
     <artifactId>sb-resource-server</artifactId>
     <name>sb-resource-server</name>
     <description>sb-resource-server</description>
-    <version>0.0.1</version>
-
+   
     <build>
         <finalName>sb-resource-server</finalName>
         <plugins>

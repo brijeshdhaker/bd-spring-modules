@@ -1,0 +1,134 @@
+#
+server:
+  port: 8100
+
+#  
+spring:
+  application:
+    name: sb-gateway-module
+    instance-id: global
+  output.ansi.enabled: ALWAYS
+
+  devtools:
+    livereload:
+      enabled: true
+
+#
+  autoconfigure:
+    # TODO: remove when fixed https://github.com/spring-projects/spring-security/issues/6314
+    exclude: org.springframework.boot.actuate.autoconfigure.security.reactive.ReactiveManagementWebSecurityAutoConfiguration
+#
+  thymeleaf:
+    cache: false
+#
+#  security:
+#    oauth2:
+#      client:
+#        registration:
+#          azure-dev:
+#            provider: azure
+#            client-id: c5c062d8-4fe2-4319-9897-a59e57ed7ad2
+#            client-secret: fXo8Q~qQgHPaJtyViMQMM_PQxSsRAN6uvqPTtdia
+#            redirect-uri-template: http://localhost:8100/login/oauth2/code/azure-dev
+#            authorization-grant-type: authorization_code
+#            scope: openid,email,profile,api://7f1cf4d7-ca24-47c2-bf17-61a8a796679e/.default
+#        provider:
+#          azure:
+#            issuer-uri: https://login.microsoftonline.com/da5ac8f7-13d6-46e7-815d-012b01123148/v2.0
+#            token-uri: https://login.microsoftonline.com/da5ac8f7-13d6-46e7-815d-012b01123148/oauth2/v2.0/token
+#            jwk-set-uri: https://login.microsoftonline.com/da5ac8f7-13d6-46e7-815d-012b01123148/discovery/v2.0/keys
+#            user-info-uri: https://graph.microsoft.com/oidc/userinfo
+#            user-name-attribute: name
+#
+  cloud:
+    gateway:
+      server:
+        webflux:
+          globalcors:
+            cors-configurations:
+              '[/**]':
+                allowedOrigins: '*'
+          routes:
+            #
+            - id: sb-resource-server-01-DC-R1
+              uri: lb://SB-RESOURCE-SERVER-01
+              predicates:
+                - Path=/api/v1/**
+                - Header=X-Tenant-Id, DC-R1
+              filters:
+                - RewritePath=/api/v1/?(?<segment>.*), /api/v1/r1/$\{segment}
+                - AddRequestParameter=src, gw
+    #            - PrefixPath=/r1
+            #
+            - id: sb-resource-server-02-DC-R2
+              uri: lb://SB-RESOURCE-SERVER-02
+              predicates:
+                - Path=/api/v1/**
+                - Header=X-Tenant-Id, DC-R2
+              filters:
+                - RewritePath=/api/v1/?(?<segment>.*), /api/v1/r2/$\{segment}
+                - AddRequestParameter=src, gw
+    #            - StripPrefix=2
+    #            - PrefixPath=/r1
+    #            - RedirectTo=302, https://acme.org, true
+    #            - AddRequestHeader=X-Tenant-Id, DC-R2
+            #
+            - id: sb-resource-server-00-DC-R0
+              uri: lb://SB-RESOURCE-SERVER-00
+              predicates:
+                - Path=/api/v1/**
+              filters:
+                - AddRequestParameter=src, gw
+                - AddRequestHeadersIfNotPresent=X-Tenant-Id:DC-R0
+            #
+            - id: sb-server-module
+              uri: http://localhost:8080
+              predicates:
+                - Path=/**
+            #
+            - id: no-service
+              uri: lb://NO-SERVICE
+              predicates:
+                - Path=/api/v1/no-service/**
+            
+
+
+# Eureka discovery client config
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://sb-discovery-service:8761/eureka
+    fetchRegistry: true
+    registerWithEureka: true
+    healthcheck:
+      enabled: true
+  instance:
+    prefer-ip-address: false
+    instance-id: ${spring.application.name}-${spring.application.instance-id}
+    lease-expiration-duration-in-seconds: 30
+    lease-renewal-interval-in-seconds: 10
+
+#
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    jmx:
+      exposure:
+        include: "*"
+    access:
+      default: READ_ONLY
+  endpoint:
+    info:
+      access: READ_ONLY
+
+#
+logging:
+  level:
+    root: INFO
+    org.springframework.cloud.gateway: TRACE
+    reactor.netty.http.client: DEBUG
+    org.springframework.web: INFO
+    org.springframework.security: DEBUG
+    org.springframework.security.oauth2: DEBUG

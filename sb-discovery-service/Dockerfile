@@ -7,7 +7,7 @@ ARG project_build_directory="target"
 ARG project_build_finalName="sb-discovery-service"
 ARG project_expose_port=8100
 
-FROM openjdk:17-jdk-slim
+FROM openjdk:25-ea-17-jdk-bullseye
 
 LABEL MAINTAINER="Brijesh K Dhaker"
 LABEL AUTHOR_EMAIL="brijeshdhaker@gmail.com"
@@ -27,4 +27,4 @@ EXPOSE 8761
 # CMD java -Djava.security.egd=file:/dev/./urandom -Dspring.profiles.active=docker -Dspring.config.location=/mnt/configs/application.yaml -jar -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=8000,suspend=n /apps/libs/${project.build.finalName}.jar
 
 #
-CMD java -Djava.security.egd=file:/dev/./urandom -jar /apps/libs/sb-discovery-service.jar
+CMD java -Djava.security.egd=file:/dev/./urandom -Dspring.config.location=/apps/configs/application.yaml -jar /apps/libs/sb-discovery-service.jar

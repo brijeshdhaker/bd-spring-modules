@@ -1,0 +1,106 @@
+#
+# docker compose -f bd-docker-sandbox/docker-compose.yml up -d
+# docker compose -f bd-docker-sandbox/docker-compose.yml down
+#
+# docker compose -f bd-docker-sandbox/docker-compose.yml up -d minio
+# docker compose -f bd-docker-sandbox/docker-compose.yml down minio
+#
+#
+---
+version: "3.9"
+services:
+  #
+  # sb-discovery-service
+  #
+  sb-discovery-service:
+    image: brijeshdhaker/sb-discovery-service:1.0.0
+    container_name: sb-discovery-service
+    hostname: sb-discovery-service.sandbox.net
+    privileged: true
+    ports:
+      - "8761:8761"
+    volumes:
+      - ./sb-discovery-service/src/main/resources/application.yml:/apps/configs/application.yaml
+    environment:
+      SB_HOME: /usr/lib/jvm/java-17-openjdk-amd64
+
+  #
+  # sb-gateway-module
+  #
+  sb-gateway-module:
+    image: brijeshdhaker/sb-gateway-module:1.0.0
+    container_name: sb-gateway-module
+    hostname: sb-gateway-module.sandbox.net
+    healthcheck:
+      test: echo $HOSTNAME || exit 1
+      retries: 20
+      interval: 10s
+    restart: always
+    ports:
+      - "8100:8100"
+    volumes:
+      - ./sb-gateway-module/src/main/resources/application-docker.yaml:/apps/configs/application.yaml
+    environment:
+      ALLOW_ANONYMOUS_LOGIN: "yes"
+    extra_hosts:
+      - "hostmaster.sandbox.net:172.18.0.1"
+
+  #
+  # sb-resource-server
+  #
+  sb-resource-server:
+    image: brijeshdhaker/sb-resource-server:1.0.0
+    container_name: sb-resource-server
+    hostname: sb-resource-server.sandbox.net
+    healthcheck:
+      test: echo $HOSTNAME || exit 1
+      retries: 20
+      interval: 10s
+    restart: always
+    ports:
+      - "8085:8085"
+    volumes:
+      - ./sb-resource-server/src/main/resources/application-docker.yaml:/apps/configs/application.yaml
+    environment:
+      ALLOW_ANONYMOUS_LOGIN: "yes"
+    extra_hosts:
+      - "hostmaster.sandbox.net:172.18.0.1"
+
+  #
+  # sb-server-module
+  #
+  sb-server-module:
+    image: brijeshdhaker/sb-server-module:1.0.0
+    container_name: sb-server-module
+    hostname: sb-server-module.sandbox.net
+    healthcheck:
+      test: echo $HOSTNAME || exit 1
+      retries: 20
+      interval: 10s
+    restart: always
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./sb-server-module/src/main/resources/application-docker.yaml:/apps/configs/application.yaml
+    environment:
+      ALLOW_ANONYMOUS_LOGIN: "yes"
+    extra_hosts:
+      - "hostmaster.sandbox.net:172.18.0.1"
+
+
+#
+# Docker Volumes
+#
+volumes:
+  #
+  sandbox_apps_path:
+    external: true
+
+#
+# Docker Networks
+#
+networks:
+  default:
+    external: true
+    driver: bridge
+    name: sandbox.net

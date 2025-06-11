@@ -44,12 +44,12 @@
 						},
 						{
 							"key": "clientSecret",
-							"value": "{{sb-frontend-module-secret}}",
+							"value": "{{sb-server-module-secret}}",
 							"type": "string"
 						},
 						{
 							"key": "clientId",
-							"value": "{{sb-frontend-module-client_id}}",
+							"value": "{{sb-server-module-client_id}}",
 							"type": "string"
 						},
 						{
@@ -145,12 +145,12 @@
 						},
 						{
 							"key": "clientSecret",
-							"value": "{{sb-frontend-module-secret}}",
+							"value": "{{sb-server-module-secret}}",
 							"type": "string"
 						},
 						{
 							"key": "clientId",
-							"value": "{{sb-frontend-module-client_id}}",
+							"value": "{{sb-server-module-client_id}}",
 							"type": "string"
 						},
 						{
@@ -253,12 +253,12 @@
 						},
 						{
 							"key": "clientSecret",
-							"value": "{{vault:sb-frontend-module-secret}}",
+							"value": "{{vault:sb-server-module-secret}}",
 							"type": "string"
 						},
 						{
 							"key": "clientId",
-							"value": "{{sb-frontend-module-client_id}}",
+							"value": "{{sb-server-module-client_id}}",
 							"type": "string"
 						},
 						{
@@ -361,12 +361,12 @@
 						},
 						{
 							"key": "clientSecret",
-							"value": "{{sb-frontend-module-secret}}",
+							"value": "{{sb-server-module-secret}}",
 							"type": "string"
 						},
 						{
 							"key": "clientId",
-							"value": "{{sb-frontend-module-client_id}}",
+							"value": "{{sb-server-module-client_id}}",
 							"type": "string"
 						},
 						{
@@ -462,12 +462,12 @@
 						},
 						{
 							"key": "clientSecret",
-							"value": "{{sb-frontend-module-secret}}",
+							"value": "{{sb-server-module-secret}}",
 							"type": "string"
 						},
 						{
 							"key": "clientId",
-							"value": "{{sb-frontend-module-client_id}}",
+							"value": "{{sb-server-module-client_id}}",
 							"type": "string"
 						},
 						{
@@ -563,12 +563,12 @@
 						},
 						{
 							"key": "clientSecret",
-							"value": "{{sb-frontend-module-secret}}",
+							"value": "{{sb-server-module-secret}}",
 							"type": "string"
 						},
 						{
 							"key": "clientId",
-							"value": "{{sb-frontend-module-client_id}}",
+							"value": "{{sb-server-module-client_id}}",
 							"type": "string"
 						},
 						{
@@ -705,12 +705,12 @@
 						},
 						{
 							"key": "clientSecret",
-							"value": "{{sb-frontend-module-secret}}",
+							"value": "{{sb-server-module-secret}}",
 							"type": "string"
 						},
 						{
 							"key": "clientId",
-							"value": "{{sb-frontend-module-client_id}}",
+							"value": "{{sb-server-module-client_id}}",
 							"type": "string"
 						},
 						{
@@ -812,12 +812,12 @@
 						},
 						{
 							"key": "clientSecret",
-							"value": "{{vault:sb-frontend-module-secret}}",
+							"value": "{{vault:sb-server-module-secret}}",
 							"type": "string"
 						},
 						{
 							"key": "clientId",
-							"value": "{{sb-frontend-module-client_id}}",
+							"value": "{{sb-server-module-client_id}}",
 							"type": "string"
 						},
 						{
@@ -914,12 +914,12 @@
 						},
 						{
 							"key": "clientSecret",
-							"value": "{{vault:sb-frontend-module-secret}}",
+							"value": "{{vault:sb-server-module-secret}}",
 							"type": "string"
 						},
 						{
 							"key": "clientId",
-							"value": "{{sb-frontend-module-client_id}}",
+							"value": "{{sb-server-module-client_id}}",
 							"type": "string"
 						},
 						{
@@ -1021,12 +1021,12 @@
 						},
 						{
 							"key": "clientSecret",
-							"value": "{{vault:sb-frontend-module-secret}}",
+							"value": "{{vault:sb-server-module-secret}}",
 							"type": "string"
 						},
 						{
 							"key": "clientId",
-							"value": "{{sb-frontend-module-client_id}}",
+							"value": "{{sb-server-module-client_id}}",
 							"type": "string"
 						},
 						{
