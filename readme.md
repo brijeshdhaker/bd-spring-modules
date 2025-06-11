@@ -1,4 +1,7 @@
 #
+$ git config --global user.name "Brijesh K Dhaker"
+$ git config --global user.email brijeshdhaker@gmail.com
+#
 echo "# bd-spring-moduless" >> README.md
 git init
 git add *

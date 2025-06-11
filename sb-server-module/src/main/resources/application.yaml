@@ -28,6 +28,10 @@ spring:
     instance-id: global
   output.ansi.enabled: ALWAYS
   #
+  devtools:
+    livereload:
+      enabled: true
+  #
   datasource:
     name: ${spring.application.name}-db
     username: sa
@@ -103,12 +107,22 @@ eureka:
     instance-id: ${spring.application.name}-${spring.application.instance-id}
     lease-expiration-duration-in-seconds: 30
     lease-renewal-interval-in-seconds: 10    
+
 #
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+    jmx:
+      exposure:
+        include: "*"
+    access:
+      default: READ_ONLY
+  endpoint:
+    info:
+      access: READ_ONLY
+
 #
 logging:
   level:

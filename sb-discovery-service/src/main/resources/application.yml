@@ -3,13 +3,17 @@ spring:
     name: sb-discovery-service
     instance-id: global
   output.ansi.enabled: ALWAYS
-
+  
+  devtools:
+    livereload:
+      enabled: true
+      
 server:
   port: 8761
 
 eureka:
   client:
-    registerWithEureka: true
+    registerWithEureka: false
     fetchRegistry: false
   server:
     peerNodeReadTimeoutMs: 10000
@@ -19,15 +23,18 @@ eureka:
     lease-expiration-duration-in-seconds: 30
     lease-renewal-interval-in-seconds: 10
 
+
 #
 management:
-  security:
-    enabled: false
   endpoints:
-    enabled-by-default: true
     web:
       exposure:
         include: "*"
+    jmx:
+      exposure:
+        include: "*"
+    access:
+      default: READ_ONLY
   endpoint:
     info:
-      enabled: true
+      access: READ_ONLY

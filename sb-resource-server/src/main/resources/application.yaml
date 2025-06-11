@@ -17,6 +17,10 @@ spring:
     instance-id: DC-R0
   output.ansi.enabled: ALWAYS
 
+  devtools:
+    livereload:
+      enabled: true
+
   security:
     oauth2:
       resourceserver:
@@ -161,16 +165,18 @@ eureka:
 
 #
 management:
-  security:
-    enabled: false
   endpoints:
-    enabled-by-default: true
     web:
       exposure:
         include: "*"
+    jmx:
+      exposure:
+        include: "*"
+    access:
+      default: READ_ONLY
   endpoint:
     info:
-      enabled: true
+      access: READ_ONLY
 
 #
 logging:
