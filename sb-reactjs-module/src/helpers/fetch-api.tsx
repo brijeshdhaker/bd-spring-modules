@@ -43,6 +43,7 @@ async function getAccessToken(){
 const fetchRestCall = async (req) => {
     return getAccessToken().then(async (accessToken : string | null ) => {
         req.options.headers.append("Authorization", `${accessToken}`);
+        const targetUrl = 'http://localhost:8100';
         return fetch(req.endpoint, req.options);
     })
     

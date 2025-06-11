@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { get } from '../services/ApiServices';
+//import { get } from '../services/ApiServices';
+import { get } from '../helpers/fetch-api';
 import Button from 'react-bootstrap/esm/Button';
 import Table from 'react-bootstrap/Table';
 import { ButtonGroup, Container } from 'react-bootstrap';
@@ -18,9 +19,20 @@ const Groups = () => {
   }
 
   useEffect(() => {
-      //
+    
+          if(groups.length === 0){
+            get('/api/v1/group/list').then((response) => response.json()).then((data) => {
+                console.log(data);
+                setGroups(data)
+                setLoading(false);
+            }).catch(()=> {
+                setLoading(false);
+            });
+          }
+    /*     
+    
       if(groups.length === 0){
-        get('/api/v1/groups').then((response) => {
+        get('/api/v1/group/list').then((response) => {
             console.log(response.data);
             setGroups(response.data)
             setLoading(false);
@@ -28,10 +40,11 @@ const Groups = () => {
             setLoading(false);
         });
       }
+    */
   }, [groups]); // Effect runs when user details changes
 
   const remove = async (id) => {
-    await fetch(`/group/${id}`, {
+    await fetch(`/api/v1/group/${id}`, {
       method: 'DELETE',
       headers: {
         'X-XSRF-TOKEN': cookies['XSRF-TOKEN'],

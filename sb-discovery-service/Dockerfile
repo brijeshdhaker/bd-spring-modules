@@ -2,7 +2,7 @@
 # docker build --no-cache --build-arg project_build_directory=target,project_build_finalName=sb-discovery-service,project_expose_port=8761 -t brijeshdhaker/sb-discovery-service:1.0.0 -f ./sb-discovery-service/Dockerfile ./sb-discovery-service
 # docker push brijeshdhaker/sb-discovery-service:1.0.0
 #
-
+ARG project_artifactId="sb-discovery-service"
 ARG project_build_directory="target"
 ARG project_build_finalName="sb-discovery-service"
 ARG project_expose_port=8100
@@ -14,12 +14,12 @@ LABEL AUTHOR_EMAIL="brijeshdhaker@gmail.com"
 LABEL PROJECT_NAME="sb-discovery-service"
 LABEL PROJECT="sb-discovery-service"
 
-ARG PARAM=${project.artifactId}
+ARG PARAM=${project_artifactId}
 
 CMD mkdir -p /apps/{libs,configs}
  
 # ADD ${project.build.directory}/${project.build.finalName}.jar /apps/libs/${project.build.finalName}.jar
-ADD sb-discovery-service/sb-discovery-service.jar /apps/libs/sb-discovery-service.jar
+ADD target/sb-discovery-service.jar /apps/libs/sb-discovery-service.jar
 
 EXPOSE 8761
 

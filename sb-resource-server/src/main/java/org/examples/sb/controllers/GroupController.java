@@ -23,8 +23,9 @@ import java.util.Map;
 import java.util.Optional;
 
 @Slf4j
+@RestController
 @CrossOrigin(origins = {"*"}, maxAge = 3600)
-@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(path ="/group", produces = MediaType.APPLICATION_JSON_VALUE)
 class GroupController {
 
     private GroupRepository groupRepository;
@@ -35,19 +36,19 @@ class GroupController {
         this.userRepository = userRepository;
     }
 
-    @GetMapping("/groups")
+    @GetMapping("/list")
     Collection<Group> groups(Principal principal) {
         return groupRepository.findAll();
     }
 
-    @GetMapping("/group/{id}")
+    @GetMapping("/{id}")
     ResponseEntity<?> getGroup(@PathVariable Long id) {
         Optional<Group> group = groupRepository.findById(id);
         return group.map(response -> ResponseEntity.ok().body(response))
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
-    @PostMapping("/group")
+    @PostMapping
     ResponseEntity<Group> createGroup(@Valid @RequestBody Group group,
                                       @AuthenticationPrincipal OAuth2User principal) throws URISyntaxException {
         log.info("Request to create group: {}", group);
@@ -62,14 +63,14 @@ class GroupController {
         return ResponseEntity.created(new URI("/group/" + result.getId())).body(result);
     }
 
-    @PutMapping("/group/{id}")
+    @PutMapping("/{id}")
     ResponseEntity<Group> updateGroup(@Valid @RequestBody Group group) {
         log.info("Request to update group: {}", group);
         Group result = groupRepository.save(group);
         return ResponseEntity.ok().body(result);
     }
 
-    @DeleteMapping("/group/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteGroup(@PathVariable Long id) {
         log.info("Request to delete group: {}", id);
         groupRepository.deleteById(id);

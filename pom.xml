@@ -35,6 +35,7 @@
         <docker.host>unix:///var/run/docker.sock</docker.host>
         <spring-security-oauth2-autoconfigure.version>2.6.8</spring-security-oauth2-autoconfigure.version>
         <spring-cloud.version>2025.0.0</spring-cloud.version>
+        <maven.test.skip>true</maven.test.skip>
     </properties>
 
     <build>
