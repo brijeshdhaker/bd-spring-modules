@@ -8,7 +8,7 @@ export const getMsalConfig = async () => {
         auth: {
             clientId: "7eed8ec9-c714-43f6-8318-710448a55a85",
             authority: "https://login.microsoftonline.com/da5ac8f7-13d6-46e7-815d-012b01123148",
-            redirectUri: "http://localhost:8100",
+            redirectUri: "http://localhost:3000",
         },
         cache: {
             cacheLocation: "sessionStorage",
