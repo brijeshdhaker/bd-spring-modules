@@ -17,6 +17,10 @@ services:
     container_name: sb-discovery-service
     hostname: sb-discovery-service.sandbox.net
     privileged: true
+    healthcheck:
+      test: echo $HOSTNAME || exit 1
+      retries: 20
+      interval: 10s
     ports:
       - "8761:8761"
     volumes:
@@ -31,6 +35,9 @@ services:
     image: brijeshdhaker/sb-gateway-module:1.0.0
     container_name: sb-gateway-module
     hostname: sb-gateway-module.sandbox.net
+    depends_on:
+      sb-discovery-service:
+        condition: service_healthy    
     healthcheck:
       test: echo $HOSTNAME || exit 1
       retries: 20
@@ -57,6 +64,9 @@ services:
       retries: 20
       interval: 10s
     restart: always
+    depends_on:
+      sb-discovery-service:
+        condition: service_healthy  
     ports:
       - "8085:8085"
     volumes:
@@ -78,6 +88,9 @@ services:
       retries: 20
       interval: 10s
     restart: always
+    depends_on:
+      sb-discovery-service:
+        condition: service_healthy  
     ports:
       - "8080:8080"
     volumes:
