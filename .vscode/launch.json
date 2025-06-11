@@ -5,7 +5,7 @@
             "name": "sb-discovery-service",
             "request": "launch",
             "cwd": "${workspaceFolder}",
-            "mainClass": "org.examples.sb.SbDiscoveryServiceApplication",
+            "mainClass": "org.examples.sb.DiscoveryService",
             "projectName": "sb-discovery-service",
             "args": "",
             "envFile": "${workspaceFolder}/.env",
@@ -13,34 +13,34 @@
         },
         {
             "type": "java",
+            "name": "sb-gateway-module",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "org.examples.sb.GatewayApplication",
+            "projectName": "sb-gateway-module",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
             "name": "sb-server-module",
             "request": "launch",
             "cwd": "${workspaceFolder}",
-            "mainClass": "org.examples.sb.SBServerModule",
+            "mainClass": "org.examples.sb.ServerApplication",
             "projectName": "sb-server-module",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         },
         {
             "type": "java",
-            "name": "sb-apis-module",
+            "name": "sb-resource-server",
             "request": "launch",
             "cwd": "${workspaceFolder}",
-            "mainClass": "org.examples.sb.SBApisModule",
-            "projectName": "sb-apis-module",
+            "mainClass": "org.examples.sb.ResourceServerApplication",
+            "projectName": "sb-resource-server",
             "args": "",
             "envFile": "${workspaceFolder}/.env",
             "vmArgs": "-Dspring.profiles.active=r0"
-        },
-        {
-            "type": "java",
-            "name": "sb-gateway-module",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "mainClass": "org.examples.sb.SbGatewayModuleApplication",
-            "projectName": "sb-gateway-module",
-            "args": "",
-            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
