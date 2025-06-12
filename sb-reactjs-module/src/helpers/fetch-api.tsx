@@ -51,7 +51,7 @@ const fetchRestCall = async (req) => {
 
 const getDefaultHeaders = () => {
     const headers = new Headers();
-//    headers.append("X-Tenant-Id", "DC-R0");
+//    headers.append("X-Tenant-Id", "GLOBAL");
     headers.append("X-Src-ID", "SANDBOX-WB");
 //    headers.append("Accept", "*");
 //    headers.append("Content-Type", "application/json");

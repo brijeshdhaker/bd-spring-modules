@@ -25,20 +25,16 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="sb-apis-module" target="17" />
-      <module name="sb-backend-module-r2" target="17" />
+      <module name="sb-resource-server" target="17" />
       <module name="sb-reactjs-tours" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="bd-spring-modules" options="-parameters" />
-      <module name="sb-apis-module" options="-parameters" />
-      <module name="sb-backend-module-r2" options="-parameters" />
       <module name="sb-discovery-service" options="-parameters" />
       <module name="sb-gateway-module" options="-parameters" />
       <module name="sb-reactjs-module" options="-parameters" />
-      <module name="sb-reactjs-tours" options="-parameters" />
       <module name="sb-resource-server" options="-parameters" />
       <module name="sb-server-module" options="-parameters" />
       <module name="sb-utilities-module" options="-parameters" />

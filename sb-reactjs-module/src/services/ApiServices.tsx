@@ -17,7 +17,7 @@ const RestClient = axios.create({
         'Accept': 'application/json',
         'Content-Type': 'application/json',
         'X-Src-ID': 'SANDBOX-WB',
-        'X-Tenant-Id': 'DC-R0',
+        'X-Tenant-Id': 'GLOBAL',
         "Access-Control-Allow-Origin": "*"
     }
 });
