@@ -83,7 +83,7 @@ spring:
             provider: azure
             client-id: c5c062d8-4fe2-4319-9897-a59e57ed7ad2
             client-secret: fXo8Q~qQgHPaJtyViMQMM_PQxSsRAN6uvqPTtdia
-            redirect-uri-template: http://localhost:8100/login/oauth2/code/azure-dev
+            redirect-uri: http://localhost:8100/login/oauth2/code/azure-dev
             authorization-grant-type: authorization_code
             scope:
               - openid
