@@ -13,8 +13,8 @@ spring:
 #      on-profile: default
 
   application:
-    name: sb-resource-server-00
-    instance-id: DC-R0
+    name: sb-resource-server
+    instance-id: global
   output.ansi.enabled: ALWAYS
 
   devtools:

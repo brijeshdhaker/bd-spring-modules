@@ -24,9 +24,12 @@ services:
     ports:
       - "8761:8761"
     volumes:
-      - ./sb-discovery-service/src/main/resources/application.yml:/apps/configs/application.yaml
+      - ./sb-discovery-service/src/main/resources/application-docker.yaml:/apps/configs/application.yaml
     environment:
-      SB_HOME: /usr/lib/jvm/java-17-openjdk-amd64
+      ALLOW_ANONYMOUS_LOGIN: "yes"
+      SPRING_PROFILES_ACTIVE: docker
+    extra_hosts:
+      - "hostmaster.sandbox.net:172.18.0.1"
 
   #
   # sb-gateway-module
@@ -49,6 +52,7 @@ services:
       - ./sb-gateway-module/src/main/resources/application-docker.yaml:/apps/configs/application.yaml
     environment:
       ALLOW_ANONYMOUS_LOGIN: "yes"
+      SPRING_PROFILES_ACTIVE: docker
     extra_hosts:
       - "hostmaster.sandbox.net:172.18.0.1"
 
@@ -73,6 +77,7 @@ services:
       - ./sb-resource-server/src/main/resources/application-docker.yaml:/apps/configs/application.yaml
     environment:
       ALLOW_ANONYMOUS_LOGIN: "yes"
+      SPRING_PROFILES_ACTIVE: docker
     extra_hosts:
       - "hostmaster.sandbox.net:172.18.0.1"
 
@@ -97,6 +102,7 @@ services:
       - ./sb-server-module/src/main/resources/application-docker.yaml:/apps/configs/application.yaml
     environment:
       ALLOW_ANONYMOUS_LOGIN: "yes"
+      SPRING_PROFILES_ACTIVE: docker
     extra_hosts:
       - "hostmaster.sandbox.net:172.18.0.1"
 

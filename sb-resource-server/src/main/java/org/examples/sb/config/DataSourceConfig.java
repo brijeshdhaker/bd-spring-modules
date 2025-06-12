@@ -40,6 +40,7 @@ public class DataSourceConfig {
     public DataSource dataSourceRouter(/*@Qualifier("region1DataSource") DataSource region1DataSource, @Qualifier("region2DataSource") DataSource region2DataSource,*/ RegionResolver tenantResolver) {
 
         Map<Object, Object> targetDataSources = new HashMap<>();
+        targetDataSources.put("GLOBAL", dataSource());
         targetDataSources.put("DC-R0", dataSource());
         targetDataSources.put("DC-R1", region1DataSource());
         targetDataSources.put("DC-R2", region2DataSource());

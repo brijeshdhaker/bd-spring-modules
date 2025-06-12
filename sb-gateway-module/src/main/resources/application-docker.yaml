@@ -50,6 +50,15 @@ spring:
                 allowedOrigins: '*'
           routes:
             #
+            - id: sb-resource-server-00-DC-R0
+              uri: lb://SB-RESOURCE-SERVER-00
+              predicates:
+                - Path=/api/v1/**
+                - Header=X-Tenant-Id, DC-R0
+              filters:
+                - RewritePath=/api/v1/?(?<segment>.*), /api/v1/r0/$\{segment}
+                - AddRequestParameter=src, gw
+            #
             - id: sb-resource-server-01-DC-R1
               uri: lb://SB-RESOURCE-SERVER-01
               predicates:
@@ -58,7 +67,6 @@ spring:
               filters:
                 - RewritePath=/api/v1/?(?<segment>.*), /api/v1/r1/$\{segment}
                 - AddRequestParameter=src, gw
-    #            - PrefixPath=/r1
             #
             - id: sb-resource-server-02-DC-R2
               uri: lb://SB-RESOURCE-SERVER-02
@@ -68,21 +76,17 @@ spring:
               filters:
                 - RewritePath=/api/v1/?(?<segment>.*), /api/v1/r2/$\{segment}
                 - AddRequestParameter=src, gw
-    #            - StripPrefix=2
-    #            - PrefixPath=/r1
-    #            - RedirectTo=302, https://acme.org, true
-    #            - AddRequestHeader=X-Tenant-Id, DC-R2
             #
-            - id: sb-resource-server-00-DC-R0
-              uri: lb://SB-RESOURCE-SERVER-00
+            - id: sb-resource-server
+              uri: lb://SB-RESOURCE-SERVER
               predicates:
                 - Path=/api/v1/**
               filters:
                 - AddRequestParameter=src, gw
-                - AddRequestHeadersIfNotPresent=X-Tenant-Id:DC-R0
+                - AddRequestHeadersIfNotPresent=X-Tenant-Id:GLOBAL
             #
             - id: sb-server-module
-              uri: http://localhost:8080
+              uri: lb://SB_SERVER_MODULE
               predicates:
                 - Path=/**
             #

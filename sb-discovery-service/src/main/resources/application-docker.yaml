@@ -4,16 +4,16 @@ spring:
     instance-id: global
   output.ansi.enabled: ALWAYS
   
-  # devtools:
-  #   livereload:
-  #     enabled: true
+  devtools:
+    livereload:
+      enabled: true
       
 server:
   port: 8761
 
 eureka:
   client:
-    registerWithEureka: false
+    registerWithEureka: true
     fetchRegistry: false
   server:
     peerNodeReadTimeoutMs: 10000
@@ -23,18 +23,17 @@ eureka:
     lease-expiration-duration-in-seconds: 30
     lease-renewal-interval-in-seconds: 10
 
-
 #
-# management:
-#   endpoints:
-#     web:
-#       exposure:
-#         include: "*"
-#     jmx:
-#       exposure:
-#         include: "*"
-#     access:
-#       default: READ_ONLY
-#   endpoint:
-#     info:
-#       access: READ_ONLY
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    jmx:
+      exposure:
+        include: "*"
+    access:
+      default: READ_ONLY
+  endpoint:
+    info:
+      access: READ_ONLY

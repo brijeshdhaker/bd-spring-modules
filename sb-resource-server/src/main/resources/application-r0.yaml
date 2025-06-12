@@ -2,7 +2,7 @@
 server:
   port: 8085
   servlet:
-    context-path: /api/v1
+    context-path: /api/v1/r0
   http2:
     enabled: true
 #
