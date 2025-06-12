@@ -2,8 +2,17 @@
 # docker compose -f bd-docker-sandbox/docker-compose.yml up -d
 # docker compose -f bd-docker-sandbox/docker-compose.yml down
 #
-# docker compose -f bd-docker-sandbox/docker-compose.yml up -d minio
-# docker compose -f bd-docker-sandbox/docker-compose.yml down minio
+# docker compose -f bd-docker-sandbox/docker-compose.yml up -d sb-discovery-service
+# docker compose -f bd-docker-sandbox/docker-compose.yml down sb-discovery-service
+#
+# docker compose -f bd-docker-sandbox/docker-compose.yml up -d sb-gateway-module
+# docker compose -f bd-docker-sandbox/docker-compose.yml down sb-gateway-module
+#
+# docker compose -f bd-docker-sandbox/docker-compose.yml up -d sb-resource-server
+# docker compose -f bd-docker-sandbox/docker-compose.yml down sb-resource-server
+#
+# docker compose -f bd-docker-sandbox/docker-compose.yml up -d sb-server-module
+# docker compose -f bd-docker-sandbox/docker-compose.yml down sb-server-module
 #
 #
 ---

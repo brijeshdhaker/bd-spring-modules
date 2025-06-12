@@ -1,6 +1,6 @@
 #
 # docker build --no-cache --build-arg project_build_directory=${project.build.directory},project.build.finalName=${project.build.finalName} -t brijeshdhaker/sb-discovery-service:1.0.0 -f ${project.basedir}/Dockerfile ${project.basedir}
-# docker push brijeshdhaker/${project.build.directory}:1.0.0
+# docker push brijeshdhaker/${project.build.finalName}:1.0.0
 #
 ARG project_artifactId=${project.build.finalName}
 ARG project_build_directory=${project.build.directory}
@@ -14,7 +14,7 @@ LABEL AUTHOR_EMAIL="brijeshdhaker@gmail.com"
 LABEL PROJECT_NAME="sb-discovery-service"
 LABEL PROJECT="sb-discovery-service"
 
-ARG ARTIFACT_ID=${project_artifactId}
+ARG ARTIFACT_ID=${project.build.finalName}
 
 CMD mkdir -p /apps/{libs,configs}
  

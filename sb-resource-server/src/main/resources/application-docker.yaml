@@ -108,7 +108,7 @@ spring:
   #
   liquibase:
     enabled: true
-    change-log: classpath:liquibase/${spring.application.instance-id}/master.yml
+    change-log: classpath:liquibase/DC-R0/master.yml
     contexts: h2
     parameters:
       textColumnType: TEXT
