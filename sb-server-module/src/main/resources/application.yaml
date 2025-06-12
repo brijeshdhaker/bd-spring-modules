@@ -2,7 +2,7 @@
 server:
   port: 8080
 #  servlet:
-#    context-path:
+#    context-path: /web/ui
   http2:
     enabled: true
 #
@@ -83,14 +83,14 @@ spring:
             provider: azure
             client-id: c5c062d8-4fe2-4319-9897-a59e57ed7ad2
             client-secret: fXo8Q~qQgHPaJtyViMQMM_PQxSsRAN6uvqPTtdia
-            redirect-uri-template: "{baseUrl}/login/oauth2/code/{registrationId}"
-#            authorization-grant-type: authorization_code
+#            redirect-uri-template: "{baseUrl}/login/oauth2/code/{registrationId}"
+            redirect-uri-template: http://localhost:8080/login/oauth2/code/azure-dev
+            authorization-grant-type: authorization_code
             scope:
               - openid
               - email
               - profile
       resourceserver:
-        id: ${spring.application.name}
         jwt:
           jwk-set-uri: https://login.microsoftonline.com/da5ac8f7-13d6-46e7-815d-012b01123148/discovery/v2.0/keys
 #
