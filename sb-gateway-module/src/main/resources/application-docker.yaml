@@ -86,7 +86,7 @@ spring:
                 - AddRequestHeadersIfNotPresent=X-Tenant-Id:GLOBAL
             #
             - id: sb-server-module
-              uri: lb://SB_SERVER_MODULE
+              uri: lb://SB-SERVER-MODULE
               predicates:
                 - Path=/**
             #
