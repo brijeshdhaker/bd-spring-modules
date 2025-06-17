@@ -97,11 +97,14 @@ spring:
               filters:
                 - AddRequestParameter=src, gw
                 - AddRequestHeadersIfNotPresent=X-Tenant-Id:GLOBAL
+                - TokenRelay=
             #
             - id: sb-server-module
               uri: lb://SB-SERVER-MODULE
               predicates:
                 - Path=/web/**
+              filters:
+                - TokenRelay=                
             #
             # - id: no-service
             #   uri: lb://NO-SERVICE

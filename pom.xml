@@ -22,7 +22,6 @@
         <module>sb-discovery-service</module>
         <module>sb-gateway-module</module>
         <module>sb-reactjs-module</module>
-        <module>sb-server-module</module>
         <module>sb-resource-server</module>
     </modules>
 

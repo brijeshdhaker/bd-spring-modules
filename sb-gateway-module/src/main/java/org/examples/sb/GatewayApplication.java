@@ -31,7 +31,7 @@ public class GatewayApplication {
 	}
 
 
-	@GetMapping(value = "/")
+	//@GetMapping(value = "/")
 	public String getIndex() {
 		return "index";
 	}

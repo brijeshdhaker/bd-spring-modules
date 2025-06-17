@@ -73,7 +73,7 @@ services:
     container_name: sb-resource-server
     hostname: sb-resource-server.sandbox.net
     healthcheck:
-      test: echo $HOSTNAME || exit 1
+      test: echo $(hostname -f) || exit 1
       retries: 20
       interval: 10s
     restart: always
@@ -89,32 +89,6 @@ services:
       SPRING_PROFILES_ACTIVE: docker
     extra_hosts:
       - "hostmaster.sandbox.net:172.18.0.1"
-
-  #
-  # sb-server-module
-  #
-  sb-server-module:
-    image: brijeshdhaker/sb-server-module:1.0.0
-    container_name: sb-server-module
-    hostname: sb-server-module.sandbox.net
-    healthcheck:
-      test: echo $(hostname -f) || exit 1
-      retries: 20
-      interval: 10s
-    restart: always
-    depends_on:
-      sb-discovery-service:
-        condition: service_healthy  
-    ports:
-      - "8080:8080"
-    volumes:
-      - ./sb-server-module/src/main/resources/application-docker.yaml:/apps/configs/application.yaml
-    environment:
-      ALLOW_ANONYMOUS_LOGIN: "yes"
-      SPRING_PROFILES_ACTIVE: docker
-    extra_hosts:
-      - "hostmaster.sandbox.net:172.18.0.1"
-
 
 #
 # Docker Volumes
