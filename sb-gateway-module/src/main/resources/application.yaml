@@ -4,50 +4,57 @@ server:
 
 #  
 spring:
+  #
   application:
     name: sb-gateway-module
     instance-id: global
   output.ansi.enabled: ALWAYS
 
+  #
   devtools:
     livereload:
       enabled: true
 
-#
-  autoconfigure:
-    # TODO: remove when fixed https://github.com/spring-projects/spring-security/issues/6314
-    exclude: org.springframework.boot.actuate.autoconfigure.security.reactive.ReactiveManagementWebSecurityAutoConfiguration
-#
+  #
+  # autoconfigure:
+  #   # TODO: remove when fixed https://github.com/spring-projects/spring-security/issues/6314
+  #   exclude: org.springframework.boot.actuate.autoconfigure.security.reactive.ReactiveManagementWebSecurityAutoConfiguration
+
+  #
   thymeleaf:
     cache: false
-#
-#  security:
-#    oauth2:
-#      client:
-#        registration:
-#          azure-dev:
-#            provider: azure
-#            client-id: c5c062d8-4fe2-4319-9897-a59e57ed7ad2
-#            client-secret: fXo8Q~qQgHPaJtyViMQMM_PQxSsRAN6uvqPTtdia
-#            redirect-uri-template: http://localhost:8100/login/oauth2/code/azure-dev
-#            authorization-grant-type: authorization_code
-#            scope: openid,email,profile,api://7f1cf4d7-ca24-47c2-bf17-61a8a796679e/.default
-#        provider:
-#          azure:
-#            issuer-uri: https://login.microsoftonline.com/da5ac8f7-13d6-46e7-815d-012b01123148/v2.0
-#            token-uri: https://login.microsoftonline.com/da5ac8f7-13d6-46e7-815d-012b01123148/oauth2/v2.0/token
-#            jwk-set-uri: https://login.microsoftonline.com/da5ac8f7-13d6-46e7-815d-012b01123148/discovery/v2.0/keys
-#            user-info-uri: https://graph.microsoft.com/oidc/userinfo
-#            user-name-attribute: name
-#
+
+  #
+  security:
+    oauth2:
+      client:
+        registration:
+          azure-dev:
+            provider: azure
+            client-id: c5c062d8-4fe2-4319-9897-a59e57ed7ad2
+            client-secret: fXo8Q~qQgHPaJtyViMQMM_PQxSsRAN6uvqPTtdia
+            redirect-uri: http://localhost:8100/login/oauth2/code/azure-dev
+            authorization-grant-type: authorization_code
+            scope: 
+              - openid
+              - email
+              - profile
+              - api://7f1cf4d7-ca24-47c2-bf17-61a8a796679e/.default
+        provider:
+          azure:
+            issuer-uri: https://login.microsoftonline.com/da5ac8f7-13d6-46e7-815d-012b01123148/v2.0
+            token-uri: https://login.microsoftonline.com/da5ac8f7-13d6-46e7-815d-012b01123148/oauth2/v2.0/token
+            jwk-set-uri: https://login.microsoftonline.com/da5ac8f7-13d6-46e7-815d-012b01123148/discovery/v2.0/keys
+            user-info-uri: https://graph.microsoft.com/oidc/userinfo
+            user-name-attribute: name
+
+  #
   cloud:
     gateway:
+      default-filters:
+        - TokenRelay
       server:
-        webflux:
-          globalcors:
-            cors-configurations:
-              '[/**]':
-                allowedOrigins: '*'
+        webmvc:
           routes:
             #
             - id: sb-resource-server-00-DC-R0
@@ -94,12 +101,12 @@ spring:
             - id: sb-server-module
               uri: lb://SB-SERVER-MODULE
               predicates:
-                - Path=/**
+                - Path=/web/**
             #
-            - id: no-service
-              uri: lb://NO-SERVICE
-              predicates:
-                - Path=/api/v1/no-service/**
+            # - id: no-service
+            #   uri: lb://NO-SERVICE
+            #   predicates:
+            #     - Path=/api/v1/no-service/**
             
 
 

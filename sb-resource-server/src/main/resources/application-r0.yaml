@@ -15,3 +15,10 @@ spring:
   application:
     name: sb-resource-server-00
     instance-id: DC-R0
+  #
+  liquibase:
+    enabled: true
+    change-log: classpath:liquibase/${spring.application.instance-id}/master.yml
+    contexts: h2
+    parameters:
+      textColumnType: TEXT    

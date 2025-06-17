@@ -27,7 +27,7 @@ services:
     hostname: sb-discovery-service.sandbox.net
     privileged: true
     healthcheck:
-      test: echo $HOSTNAME || exit 1
+      test: echo $(hostname -f) || exit 1
       retries: 20
       interval: 10s
     ports:
@@ -51,7 +51,7 @@ services:
       sb-discovery-service:
         condition: service_healthy    
     healthcheck:
-      test: echo $HOSTNAME || exit 1
+      test: echo $(hostname -f) || exit 1
       retries: 20
       interval: 10s
     restart: always
@@ -98,7 +98,7 @@ services:
     container_name: sb-server-module
     hostname: sb-server-module.sandbox.net
     healthcheck:
-      test: echo $HOSTNAME || exit 1
+      test: echo $(hostname -f) || exit 1
       retries: 20
       interval: 10s
     restart: always

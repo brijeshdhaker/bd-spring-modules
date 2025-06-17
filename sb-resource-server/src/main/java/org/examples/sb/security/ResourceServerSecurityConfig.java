@@ -44,12 +44,11 @@ public class ResourceServerSecurityConfig {
                         // All API URLs must be authenticated.
                         .requestMatchers("/api/v1/**").authenticated()
                         // All other paths allowed without auth.
-                        .anyRequest().permitAll())
-                .oauth2ResourceServer(oauth2ResourceServer -> oauth2ResourceServer
-                        .jwt(jwt -> jwt
-                                .jwtAuthenticationConverter(jwtAuthenticationConverter())
-                                .jwkSetUri(jwkSetUri)
-                        ))
+                        .anyRequest().permitAll()
+        );
+        
+        http.oauth2ResourceServer(oauth2ResourceServer -> oauth2ResourceServer.jwt(jwt -> jwt.jwkSetUri(jwkSetUri)));
+
                 //.cors(Customizer.withDefaults())
                 //.httpBasic(Customizer.withDefaults())
                 //.csrf((csrf) -> csrf

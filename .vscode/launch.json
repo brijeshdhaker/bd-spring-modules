@@ -1,5 +1,6 @@
 {
     "configurations": [
+        
         {
             "type": "java",
             "name": "sb-discovery-service",
@@ -42,7 +43,7 @@
             "projectName": "sb-resource-server",
             "args": "",
             "envFile": "${workspaceFolder}/.env",
-            "vmArgs": "-Dspring.jmx.enabled=true -Dspring.devtools.livereload.enabled=true -Dspring.profiles.active=r0"
+            "vmArgs": "-Dspring.jmx.enabled=true -Dspring.devtools.livereload.enabled=true"
         }
     ]
 }

@@ -1,8 +1,8 @@
 #
 server:
   port: 8080
-#  servlet:
-#    context-path: /web/ui
+  servlet:
+    context-path: /web
   http2:
     enabled: true
 #
@@ -93,6 +93,8 @@ spring:
       resourceserver:
         jwt:
           jwk-set-uri: https://login.microsoftonline.com/da5ac8f7-13d6-46e7-815d-012b01123148/discovery/v2.0/keys
+          issuer-uri: https://sts.windows.net/da5ac8f7-13d6-46e7-815d-012b01123148/
+          audiences: api://7f1cf4d7-ca24-47c2-bf17-61a8a796679e
 #
 
 #
