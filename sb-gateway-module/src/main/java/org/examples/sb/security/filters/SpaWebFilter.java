@@ -1,5 +1,5 @@
 package org.examples.sb.security.filters;
-
+/* 
 import java.io.IOException;
 
 import org.springframework.security.core.Authentication;
@@ -25,4 +25,6 @@ public class SpaWebFilter extends OncePerRequestFilter {
 
         filterChain.doFilter(request, response);
     }
-}
+} 
+
+*/

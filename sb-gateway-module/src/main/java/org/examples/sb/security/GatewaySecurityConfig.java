@@ -1,22 +1,16 @@
-package org.examples.sb;
+package org.examples.sb.security;
 
-import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.examples.sb.security.GroupsClaimMapper;
-import org.examples.sb.security.JwtAuthorizationProperties;
-import org.examples.sb.security.NamedOidcUser;
-import org.examples.sb.security.SandboxAuthoritiesExtractor;
-import org.examples.sb.security.SandboxPrincipalExtractor;
-import org.examples.sb.security.filters.CookieCsrfFilter;
-import org.examples.sb.security.filters.SpaWebFilter;
 import org.springframework.boot.autoconfigure.security.oauth2.resource.AuthoritiesExtractor;
 import org.springframework.boot.autoconfigure.security.oauth2.resource.PrincipalExtractor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
-import org.springframework.security.config.annotation.web.configurers.HeadersConfigurer;
+//import org.springframework.security.config.annotation.web.configurers.HeadersConfigurer;
+import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
 import org.springframework.security.config.web.server.ServerHttpSecurity;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.oauth2.client.oidc.userinfo.OidcUserRequest;
@@ -25,27 +19,12 @@ import org.springframework.security.oauth2.client.oidc.web.server.logout.OidcCli
 import org.springframework.security.oauth2.client.registration.ReactiveClientRegistrationRepository;
 import org.springframework.security.oauth2.client.userinfo.OAuth2UserService;
 import org.springframework.security.oauth2.core.oidc.user.OidcUser;
-import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.security.web.authentication.logout.LogoutHandler;
-import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
-import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
-import org.springframework.security.web.csrf.CsrfTokenRequestAttributeHandler;
-import org.springframework.security.web.savedrequest.HttpSessionRequestCache;
-import org.springframework.security.web.savedrequest.RequestCache;
-import org.springframework.security.web.savedrequest.SimpleSavedRequest;
 import org.springframework.security.web.server.SecurityWebFilterChain;
 import org.springframework.security.web.server.header.XFrameOptionsServerHttpHeadersWriter.Mode;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
-//import org.springframework.security.config.annotation.web.configurers.HeadersConfigurer;
-import org.springframework.security.config.Customizer;
 
 @Configuration
+//@EnableWebSecurity
+//@EnableWebFluxSecurity
 public class GatewaySecurityConfig {
     
     /* 
@@ -61,17 +40,22 @@ public class GatewaySecurityConfig {
         
         // Authenticate through configured OpenID Provider
         http.oauth2Login(Customizer.withDefaults());
-
-		// Also logout at the OpenID Connect provider
+        
+        // Access Protected Resources for the Current User
+        http.oauth2Client(Customizer.withDefaults());        
+		
+        // Also logout at the OpenID Connect provider
         http.logout(logout -> logout.logoutSuccessHandler(new OidcClientInitiatedServerLogoutSuccessHandler(clientRegistrationRepository)));
         
         return http.build();
     
 	}
+
     */ 
+     
     /* 
     @Bean
-	public SecurityFilterChain securityFilterChain(HttpSecurity http, JwtAuthorizationProperties jwtprops) throws Exception {
+	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		
 		// All other paths must be authenticated.
         http.authorizeHttpRequests((requests) -> requests
@@ -121,7 +105,7 @@ public class GatewaySecurityConfig {
         return http.build();
     
 	}
-    */
+   
 
     private LogoutHandler logoutHandler() {
         return (request, response, authentication) -> {
@@ -152,7 +136,7 @@ public class GatewaySecurityConfig {
     }
 
 
-    /*
+    
     @Bean
     public UserDetailsService userDetailsService() {
         UserDetails user = User.withDefaultPasswordEncoder()

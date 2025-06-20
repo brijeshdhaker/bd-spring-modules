@@ -62,7 +62,7 @@
             <optional>true</optional>
         </dependency>
 
-		<!-- Spring Security -->
+		<!-- Spring Security oAuth2-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-oauth2-client</artifactId>
@@ -79,6 +79,7 @@
             <version>${spring-security-oauth2-autoconfigure.version}</version>
         </dependency>
 
+        <!-- Spring Boot security dependencies -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
@@ -98,6 +99,19 @@
 			<groupId>nz.net.ultraq.thymeleaf</groupId>
 			<artifactId>thymeleaf-layout-dialect</artifactId>
 		</dependency>
+
+        <!-- MS Graph SDK -->
+        <dependency>
+            <groupId>com.microsoft.graph</groupId>
+            <artifactId>microsoft-graph</artifactId>
+            <version>6.36.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.azure</groupId>
+            <artifactId>azure-identity</artifactId>
+            <version>1.11.0</version>
+        </dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -122,6 +136,7 @@
             <build>
                 <plugins>
                     <!-- Jar local copy -->
+                    <!-- 
                     <plugin>
                         <artifactId>maven-resources-plugin</artifactId>
                         <version>3.0.2</version>
@@ -146,6 +161,7 @@
                             </execution>
                         </executions>
                     </plugin>
+                    -->
                     <!-- Maven Docker plugins -->
                     <plugin>
                         <groupId>io.fabric8</groupId>

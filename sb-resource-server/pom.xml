@@ -205,6 +205,7 @@
             <build>
                 <plugins>
                     <!-- Jar local copy -->
+                    <!-- 
                     <plugin>
                         <artifactId>maven-resources-plugin</artifactId>
                         <version>3.0.2</version>
@@ -229,6 +230,7 @@
                             </execution>
                         </executions>
                     </plugin>
+                    -->
                     <!-- Maven Docker plugins -->
                     <plugin>
                         <groupId>io.fabric8</groupId>

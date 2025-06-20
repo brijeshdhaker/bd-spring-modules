@@ -1,6 +1,5 @@
 {
     "configurations": [
-        
         {
             "type": "java",
             "name": "sb-discovery-service",
@@ -9,7 +8,7 @@
             "mainClass": "org.examples.sb.DiscoveryService",
             "projectName": "sb-discovery-service",
             "args": "",
-            "envFile": "${workspaceFolder}/.env",
+            "envFile": "${workspaceFolder}/.env_local",
             "vmArgs": "-Dspring.jmx.enabled=true -Dspring.devtools.livereload.enabled=true"
         },
         {
@@ -20,18 +19,7 @@
             "mainClass": "org.examples.sb.GatewayApplication",
             "projectName": "sb-gateway-module",
             "args": "",
-            "envFile": "${workspaceFolder}/.env",
-            "vmArgs": "-Dspring.jmx.enabled=true -Dspring.devtools.livereload.enabled=true"
-        },
-        {
-            "type": "java",
-            "name": "sb-server-module",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "mainClass": "org.examples.sb.ServerApplication",
-            "projectName": "sb-server-module",
-            "args": "",
-            "envFile": "${workspaceFolder}/.env",
+            "envFile": "${workspaceFolder}/.env_local",
             "vmArgs": "-Dspring.jmx.enabled=true -Dspring.devtools.livereload.enabled=true"
         },
         {
@@ -42,7 +30,7 @@
             "mainClass": "org.examples.sb.ResourceServerApplication",
             "projectName": "sb-resource-server",
             "args": "",
-            "envFile": "${workspaceFolder}/.env",
+            "envFile": "${workspaceFolder}/.env_local",
             "vmArgs": "-Dspring.jmx.enabled=true -Dspring.devtools.livereload.enabled=true"
         }
     ]

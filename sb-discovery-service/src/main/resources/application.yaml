@@ -1,16 +1,20 @@
+#      
+server:
+  port: 8761
+
+#
 spring:
+  #
   application:
     name: sb-discovery-service
     instance-id: global
   output.ansi.enabled: ALWAYS
-  
+  #
   devtools:
     livereload:
       enabled: true
-      
-server:
-  port: 8761
 
+#
 eureka:
   client:
     registerWithEureka: true
@@ -37,3 +41,9 @@ management:
   endpoint:
     info:
       access: READ_ONLY
+
+#
+logging:
+  level:
+    root: ERROR
+    reactor.netty.http.client: ERROR

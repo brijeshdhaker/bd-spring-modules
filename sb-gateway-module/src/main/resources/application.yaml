@@ -35,11 +35,10 @@ spring:
             client-secret: fXo8Q~qQgHPaJtyViMQMM_PQxSsRAN6uvqPTtdia
             redirect-uri: http://localhost:8100/login/oauth2/code/azure-dev
             authorization-grant-type: authorization_code
-            scope: 
+            scope:  
               - openid
               - email
               - profile
-              - api://7f1cf4d7-ca24-47c2-bf17-61a8a796679e/.default
         provider:
           azure:
             issuer-uri: https://login.microsoftonline.com/da5ac8f7-13d6-46e7-815d-012b01123148/v2.0
@@ -51,8 +50,8 @@ spring:
   #
   cloud:
     gateway:
-      default-filters:
-        - TokenRelay
+      # default-filters:
+      #   - TokenRelay=
       server:
         webmvc:
           routes:
@@ -97,27 +96,13 @@ spring:
               filters:
                 - AddRequestParameter=src, gw
                 - AddRequestHeadersIfNotPresent=X-Tenant-Id:GLOBAL
-                - TokenRelay=
-            #
-            - id: sb-server-module
-              uri: lb://SB-SERVER-MODULE
-              predicates:
-                - Path=/web/**
-              filters:
-                - TokenRelay=                
-            #
-            # - id: no-service
-            #   uri: lb://NO-SERVICE
-            #   predicates:
-            #     - Path=/api/v1/no-service/**
-            
-
+                # - TokenRelay=
 
 # Eureka discovery client config
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://${EUREKA_SERVICE_HOST}:8761/eureka
     fetchRegistry: true
     registerWithEureka: true
     healthcheck:

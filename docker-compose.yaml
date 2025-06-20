@@ -33,8 +33,9 @@ services:
     ports:
       - "8761:8761"
     volumes:
-      - ./sb-discovery-service/src/main/resources/application-docker.yaml:/apps/configs/application.yaml
+      - ./sb-discovery-service/src/main/resources/application.yaml:/apps/configs/application.yaml
     environment:
+      EUREKA_SERVICE_HOST: "sb-discovery-service.sandbox.net"
       ALLOW_ANONYMOUS_LOGIN: "yes"
       SPRING_PROFILES_ACTIVE: docker
     extra_hosts:
@@ -58,10 +59,10 @@ services:
     ports:
       - "8100:8100"
     volumes:
-      - ./sb-gateway-module/src/main/resources/application-docker.yaml:/apps/configs/application.yaml
+      - ./sb-gateway-module/src/main/resources/application.yaml:/apps/configs/application.yaml
     environment:
-      ALLOW_ANONYMOUS_LOGIN: "yes"
-      SPRING_PROFILES_ACTIVE: docker
+      EUREKA_SERVICE_HOST: "sb-discovery-service.sandbox.net"
+      RESOURCE_SERVER_HOST: "sb-resource-server.sandbox.net"
     extra_hosts:
       - "hostmaster.sandbox.net:172.18.0.1"
 
@@ -83,8 +84,9 @@ services:
     ports:
       - "8085:8085"
     volumes:
-      - ./sb-resource-server/src/main/resources/application-docker.yaml:/apps/configs/application.yaml
+      - ./sb-resource-server/src/main/resources/application.yaml:/apps/configs/application.yaml
     environment:
+      EUREKA_SERVICE_HOST: "sb-discovery-service.sandbox.net"
       ALLOW_ANONYMOUS_LOGIN: "yes"
       SPRING_PROFILES_ACTIVE: docker
     extra_hosts:

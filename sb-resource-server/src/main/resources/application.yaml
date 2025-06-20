@@ -152,7 +152,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://${EUREKA_SERVICE_HOST}:8761/eureka
     fetchRegistry: true
     registerWithEureka: true
     healthcheck:
@@ -182,9 +182,9 @@ management:
 logging:
   level:
     root: INFO
-    reactor.netty.http.client: DEBUG
-    org.springframework.web: INFO
-    org.springframework.security: DEBUG
-    org.springframework.security.oauth2: DEBUG
-    org.springframework.kafka: error
-    org.springframework.transaction: trace
+    reactor.netty.http.client: ERROR
+    org.springframework.web: ERROR
+    org.springframework.security: ERROR
+    org.springframework.security.oauth2: ERROR
+    org.springframework.kafka: ERROR
+    org.springframework.transaction: ERROR
