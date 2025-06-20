@@ -36,7 +36,6 @@ services:
       - ./sb-discovery-service/src/main/resources/application.yaml:/apps/configs/application.yaml
     environment:
       EUREKA_SERVICE_HOST: "sb-discovery-service.sandbox.net"
-      ALLOW_ANONYMOUS_LOGIN: "yes"
       SPRING_PROFILES_ACTIVE: docker
     extra_hosts:
       - "hostmaster.sandbox.net:172.18.0.1"
@@ -87,7 +86,6 @@ services:
       - ./sb-resource-server/src/main/resources/application.yaml:/apps/configs/application.yaml
     environment:
       EUREKA_SERVICE_HOST: "sb-discovery-service.sandbox.net"
-      ALLOW_ANONYMOUS_LOGIN: "yes"
       SPRING_PROFILES_ACTIVE: docker
     extra_hosts:
       - "hostmaster.sandbox.net:172.18.0.1"
