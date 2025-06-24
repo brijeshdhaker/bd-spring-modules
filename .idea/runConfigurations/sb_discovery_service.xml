@@ -1,6 +1,9 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="sb-discovery-service" type="Application" factoryName="Application">
-    <option name="MAIN_CLASS_NAME" value="org.examples.sb.SbDiscoveryServiceApplication" />
+    <option name="envFilePaths">
+      <option value="$PROJECT_DIR$/.env_local" />
+    </option>
+    <option name="MAIN_CLASS_NAME" value="org.examples.sb.DiscoveryService" />
     <module name="sb-discovery-service" />
     <extension name="coverage">
       <pattern>

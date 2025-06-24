@@ -14,18 +14,15 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
         </processorPath>
-        <module name="sb-gateway-module" />
-        <module name="sb-utilities-module" />
-        <module name="sb-server-module" />
         <module name="sb-reactjs-module" />
         <module name="sb-resource-server" />
         <module name="sb-discovery-service" />
+        <module name="sb-gateway-module" />
+        <module name="sb-utilities-module" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="sb-resource-server" target="17" />
       <module name="sb-reactjs-tours" target="17" />
     </bytecodeTargetLevel>
   </component>

@@ -1,5 +1,8 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="sb-resource-server" type="Application" factoryName="Application">
+    <option name="envFilePaths">
+      <option value="$PROJECT_DIR$/.env_local" />
+    </option>
     <option name="MAIN_CLASS_NAME" value="org.examples.sb.ResourceServerApplication" />
     <module name="sb-resource-server" />
     <extension name="coverage">

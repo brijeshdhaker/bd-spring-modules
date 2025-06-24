@@ -5,169 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30633151-d715-4afb-8728-2a26e7f9ee44" name="Changes" comment="2025-06-03 Update reactjs modules">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/sb_resource_server.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/sb_resource_server_00.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-discovery-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-gateway-module/src/main/java/org/examples/sb/GatewayApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-resource-server/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/ResourceServerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/controllers/SecureController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sb-server-module/src/main/java/org/examples/sb/controllers/SecureController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/sb_api_module_r1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/sb_resource_server_01.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/sb_api_module_r2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/sb_resource_server_02.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/sb_discovery_service.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/sb_discovery_service.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/sb_gateway_module.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/sb_gateway_module.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/sb_server_module.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/sb_server_module.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/sb_resource_server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/sb_resource_server.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/sb_resource_server_00.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/sb_resource_server_01.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/sb_resource_server_02.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/sb_server_module.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/SBApisModule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/config/ApplicationProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/config/ApplicationProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/config/DataSourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/config/DataSourceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/config/KafkaConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/config/KafkaConsumerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/config/KafkaCustomProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/config/KafkaCustomProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/config/KafkaProducerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/config/KafkaProducerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/config/LiquibaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/config/LiquibaseConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/config/Mapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/config/Mapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/config/OpenAPIConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/config/OpenAPIConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/config/PersistenceJPAConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/config/PersistenceJPAConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/config/cache/CacheConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/config/cache/CacheConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/config/cache/CacheEventLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/config/cache/CacheEventLogger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/controllers/AuditlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/controllers/AuditlogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/controllers/EntitlementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/controllers/EntitlementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/controllers/GroupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/controllers/GroupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/controllers/HealthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/controllers/HealthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/controllers/KafkaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/controllers/KafkaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/dao/extractors/UserResultSetExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/dao/extractors/UserResultSetExtractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/dao/impl/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/dao/impl/UserDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/dao/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/dao/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/exceptions/AppAccessDeniedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/exceptions/AppAccessDeniedException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/exceptions/AppDataAccessException.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/exceptions/AppDataAccessException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/exceptions/AppRestResponseEntityExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/exceptions/AppRestResponseEntityExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/exceptions/NotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/exceptions/NotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/filters/RegionInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/filters/RegionInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/helpers/HeaderRegionResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/helpers/HeaderRegionResolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/helpers/ModelHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/helpers/ModelHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/helpers/MultiRegionDataSourceRouter.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/helpers/MultiRegionDataSourceRouter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/helpers/RegionResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/helpers/RegionResolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/helpers/ThreadLocalRegionResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/helpers/ThreadLocalRegionResolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/kafka/KafkaConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/kafka/KafkaConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/kafka/KafkaProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/kafka/KafkaProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/kafka/TocipManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/kafka/TocipManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/repositories/AuditlogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/repositories/AuditlogRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/repositories/GroupRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/repositories/GroupRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/repositories/entities/AuditlogEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/repositories/entities/AuditlogEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/repositories/entities/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/repositories/entities/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/repositories/entities/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/repositories/entities/Group.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/repositories/entities/LocalDateTimeConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/repositories/entities/LocalDateTimeConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/repositories/entities/RoleEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/repositories/entities/RoleEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/repositories/entities/SystemDateTimeConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/repositories/entities/SystemDateTimeConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/repositories/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/repositories/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/repositories/entities/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/repositories/entities/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/security/Auth0Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/security/Auth0Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/security/SpringSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/security/ResourceServerSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/security/filters/CookieCsrfFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/security/filters/CookieCsrfFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/security/filters/SpaWebFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/security/filters/SpaWebFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/services/AuditlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/services/AuditlogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/services/JdbcService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/services/JdbcService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/services/TransactionsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/services/TransactionsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/utils/JwtUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/utils/JwtUtilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/java/org/examples/sb/utils/YamlLoaderInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/java/org/examples/sb/utils/YamlLoaderInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/application-r0.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/application-r0.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/application-r1.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/application-r1.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/application-r2.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/application-r2.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/ehcache.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/ehcache.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R0/base.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R0/base.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R0/changelogs/JIRA-0001/proc-changelog.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R0/changelogs/JIRA-0001/proc-changelog.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R0/changelogs/JIRA-0001/script-changelog.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R0/changelogs/JIRA-0001/script-changelog.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R0/changelogs/JIRA-0001/table-changelog.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R0/changelogs/JIRA-0001/table-changelog.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R0/changelogs/JIRA-0002/script-changelog.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R0/changelogs/JIRA-0002/script-changelog.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R0/changelogs/JIRA-0002/table-changelog.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R0/changelogs/JIRA-0002/table-changelog.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R0/master.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R0/master.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R0/objects/procs/P_GET_PRODUCT_DETAILS.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R0/objects/procs/P_GET_PRODUCT_DETAILS.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R0/objects/procs/P_GET_USER_DETAILS.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R0/objects/procs/P_GET_USER_DETAILS.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R0/objects/tables/audit-type-table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R0/objects/tables/audit-type-table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R0/objects/tables/table_products.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R0/objects/tables/table_products.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R0/objects/tables/transaction-table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R0/objects/tables/transaction-table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R0/proc-master.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R0/proc-master.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R0/scripts-master.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R0/scripts-master.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R0/scripts/audit-type-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R0/scripts/audit-type-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R0/scripts/auditlog-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R0/scripts/auditlog-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R0/scripts/products-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R0/scripts/products-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R0/scripts/role-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R0/scripts/role-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R0/scripts/user-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R0/scripts/user-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R0/scripts/user-role-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R0/scripts/user-role-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R0/tables-master.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R0/tables-master.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R1/base.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R1/base.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R1/changelogs/JIRA-0001/proc-changelog.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R1/changelogs/JIRA-0001/proc-changelog.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R1/changelogs/JIRA-0001/script-changelog.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R1/changelogs/JIRA-0001/script-changelog.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R1/changelogs/JIRA-0001/table-changelog.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R1/changelogs/JIRA-0001/table-changelog.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R1/changelogs/JIRA-0002/script-changelog.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R1/changelogs/JIRA-0002/script-changelog.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R1/changelogs/JIRA-0002/table-changelog.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R1/changelogs/JIRA-0002/table-changelog.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R1/master.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R1/master.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R1/objects/procs/P_GET_PRODUCT_DETAILS.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R1/objects/procs/P_GET_PRODUCT_DETAILS.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R1/objects/procs/P_GET_USER_DETAILS.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R1/objects/procs/P_GET_USER_DETAILS.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R1/objects/tables/audit-type-table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R1/objects/tables/audit-type-table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R1/objects/tables/table_products.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R1/objects/tables/table_products.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R1/objects/tables/transaction-table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R1/objects/tables/transaction-table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R1/proc-master.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R1/proc-master.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R1/scripts-master.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R1/scripts-master.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R1/scripts/audit-type-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R1/scripts/audit-type-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R1/scripts/auditlog-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R1/scripts/auditlog-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R1/scripts/products-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R1/scripts/products-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R1/scripts/role-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R1/scripts/role-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R1/scripts/user-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R1/scripts/user-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R1/scripts/user-role-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R1/scripts/user-role-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R1/tables-master.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R1/tables-master.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R2/base.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R2/base.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R2/changelogs/JIRA-0001/proc-changelog.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R2/changelogs/JIRA-0001/proc-changelog.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R2/changelogs/JIRA-0001/script-changelog.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R2/changelogs/JIRA-0001/script-changelog.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R2/changelogs/JIRA-0001/table-changelog.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R2/changelogs/JIRA-0001/table-changelog.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R2/changelogs/JIRA-0002/script-changelog.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R2/changelogs/JIRA-0002/script-changelog.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R2/changelogs/JIRA-0002/table-changelog.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R2/changelogs/JIRA-0002/table-changelog.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R2/master.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R2/master.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R2/objects/procs/P_GET_PRODUCT_DETAILS.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R2/objects/procs/P_GET_PRODUCT_DETAILS.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R2/objects/procs/P_GET_USER_DETAILS.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R2/objects/procs/P_GET_USER_DETAILS.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R2/objects/tables/audit-type-table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R2/objects/tables/audit-type-table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R2/objects/tables/table_products.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R2/objects/tables/table_products.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R2/objects/tables/transaction-table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R2/objects/tables/transaction-table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R2/proc-master.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R2/proc-master.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R2/scripts-master.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R2/scripts-master.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R2/scripts/audit-type-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R2/scripts/audit-type-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R2/scripts/auditlog-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R2/scripts/auditlog-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R2/scripts/products-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R2/scripts/products-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R2/scripts/role-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R2/scripts/role-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R2/scripts/user-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R2/scripts/user-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R2/scripts/user-role-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R2/scripts/user-role-data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-apis-module/src/main/resources/liquibase/DC-R2/tables-master.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-resource-server/src/main/resources/liquibase/DC-R2/tables-master.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-discovery-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-discovery-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-discovery-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/sb-discovery-service/src/main/resources/prop/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-discovery-service/src/test/java/org/examples/sb/SbDiscoveryServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-discovery-service/src/test/java/org/examples/sb/DiscoveryServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-gateway-module/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-gateway-module/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-gateway-module/src/main/java/org/examples/sb/SbGatewayModuleApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-gateway-module/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-gateway-module/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-gateway-module/src/main/resources/templates/hello.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-gateway-module/src/main/resources/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-gateway-module/src/test/java/org/examples/sb/SbGatewayModuleApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-gateway-module/src/test/java/org/examples/sb/GatewayApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-reactjs-module/.env.development" beforeDir="false" afterPath="$PROJECT_DIR$/sb-reactjs-module/.env.development" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-reactjs-module/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/sb-reactjs-module/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-reactjs-module/src/pages/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sb-reactjs-module/src/pages/Users.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-reactjs-module/src/services/ApiServices.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sb-reactjs-module/src/services/ApiServices.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-reactjs-module/src/utils/authConfig.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sb-reactjs-module/src/utils/authConfig.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-server-module/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-server-module/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-server-module/src/main/java/org/examples/sb/SBServerModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-server-module/src/main/java/org/examples/sb/ServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-server-module/src/main/java/org/examples/sb/security/SpringWebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sb-server-module/src/main/java/org/examples/sb/security/SpringWebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sb-server-module/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/sb-server-module/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +51,7 @@
   }
 }</component>
   <component name="MavenImportPreferences">
-    <option name="explicitlyDisabledProfiles" value="docker" />
+    <option name="explicitlyEnabledProfiles" value="prod" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
@@ -248,8 +96,11 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "develop/regular__development",
-    "last_opened_file_path": "/home/brijeshdhaker/IdeaProjects/bd-spring-modules/sb-resource-server/src/main/java/org/examples/sb/repositories/entities",
+    "last_opened_file_path": "/home/brijeshdhaker/IdeaProjects/bd-spring-modules/sb-resource-server",
     "onboarding.tips.debug.path": "/home/brijeshdhaker/IdeaProjects/bd-spring-modules/sb-resource-server/src/main/java/org/examples/sb/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
@@ -279,7 +130,7 @@
       <command value="npm run dev" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.sb-gateway-module">
+  <component name="RunManager" selected="Application.sb-resource-server">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="bd-spring-modules" />
       <method v="2">
@@ -326,10 +177,6 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.sb-resource-server-00" />
-      <item itemvalue="Application.sb-resource-server-01" />
-      <item itemvalue="Application.sb-resource-server-02" />
-      <item itemvalue="Application.sb-server-module" />
       <item itemvalue="Application.sb-discovery-service" />
       <item itemvalue="Application.sb-resource-server" />
       <item itemvalue="Application.sb-gateway-module" />
