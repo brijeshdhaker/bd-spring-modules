@@ -34,9 +34,11 @@ services:
       - "8761:8761"
     volumes:
       - ./sb-discovery-service/src/main/resources/application.yaml:/apps/configs/application.yaml
+    env_file:
+      - .env_docker
     environment:
-      EUREKA_SERVICE_HOST: "sb-discovery-service.sandbox.net"
-      SPRING_PROFILES_ACTIVE: docker
+      APP_LOG_DIR: /apps/var/logs/sb-applications
+      APP_LOG_FILE: sb-discovery-service
     extra_hosts:
       - "hostmaster.sandbox.net:172.18.0.1"
 
@@ -59,9 +61,11 @@ services:
       - "8100:8100"
     volumes:
       - ./sb-gateway-module/src/main/resources/application.yaml:/apps/configs/application.yaml
+    env_file:
+      - .env_docker
     environment:
-      EUREKA_SERVICE_HOST: "sb-discovery-service.sandbox.net"
-      RESOURCE_SERVER_HOST: "sb-resource-server.sandbox.net"
+      APP_LOG_DIR: /apps/var/logs/sb-applications
+      APP_LOG_FILE: sb-gateway-module
     extra_hosts:
       - "hostmaster.sandbox.net:172.18.0.1"
 
@@ -84,9 +88,11 @@ services:
       - "8085:8085"
     volumes:
       - ./sb-resource-server/src/main/resources/application.yaml:/apps/configs/application.yaml
+    env_file:
+      - .env_docker
     environment:
-      EUREKA_SERVICE_HOST: "sb-discovery-service.sandbox.net"
-      SPRING_PROFILES_ACTIVE: docker
+      APP_LOG_DIR: /apps/var/logs/sb-applications
+      APP_LOG_FILE: sb-resource-server
     extra_hosts:
       - "hostmaster.sandbox.net:172.18.0.1"
 

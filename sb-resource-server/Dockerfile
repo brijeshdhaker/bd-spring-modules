@@ -3,7 +3,7 @@
 # docker push brijeshdhaker/sb-resource-server:1.0.0
 #
 
-FROM openjdk:25-ea-17-jdk-bullseye
+FROM openjdk:17-jdk-slim
 LABEL maintainer="Brijesh K Dhaker <brijeshdhaker@gmail.com>"
 LABEL PROJECT_NAME=sb-resource-server
 LABEL PROJECT=${project.artifactId}

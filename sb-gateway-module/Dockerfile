@@ -7,7 +7,7 @@ ARG project_build_directory=${project.build.directory}
 ARG project_build_finalName=${project.build.finalName}
 ARG project_expose_port=8100
 
-FROM openjdk:25-ea-17-jdk-bullseye
+FROM openjdk:17-jdk-slim
 
 LABEL MAINTAINER="Brijesh K Dhaker"
 LABEL AUTHOR_EMAIL="brijeshdhaker@gmail.com"
